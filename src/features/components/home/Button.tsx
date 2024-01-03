@@ -2,12 +2,12 @@ import React from 'react';
 
 interface ButtonProps {
     onClick: () => void;
-    text: string;
+    children: React.ReactNode;
 }
 
-const Button: React.FC<ButtonProps> = ({ onClick, text }) => {
+const Button: React.FC<ButtonProps> = ({ onClick, children }) => {
     return (
-        <button className = {"customButton ml-24 mt-10"} onClick={onClick}>{text}</button>
+        <button className = {"customButton ml-24"} onClick={onClick}>{children}</button>
     );
 };
 

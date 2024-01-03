@@ -1,6 +1,5 @@
-
 .developerSection{
-    line-height: 75px;
+    line-height: 70px !important;
 }
 .homeContainer{
     background-image: url("/assets/home/bgFinal.png");
@@ -56,6 +55,7 @@
 
 
 .customButton {
+    margin-top: 108px;
     background-color: #4B0082; /* Dark purple color */
     color: white; /* White text color */
     border: 1px solid #fff; /* No border */

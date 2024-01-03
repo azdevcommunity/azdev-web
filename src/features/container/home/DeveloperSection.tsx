@@ -9,7 +9,7 @@ const DeveloperSection = () => {
             Give me 24 <br/>
             hours
         </div>
-        <Button text={"Join Community"} onClick={() => {}} />
+        <Button onClick={() => {}} >Join Community</Button>
         </>
     );
 };
