@@ -1,5 +1,5 @@
-.developerSection{
-    line-height: 70px !important;
+.developerSection > div{
+    /* line-height:0.9  ; */
 }
 .homeContainer{
     background-image: url("/assets/home/bgFinal.png");
@@ -16,7 +16,7 @@
     color: transparent;
     background-position: center;
     background-size: cover;
-
+    line-height: 1 !important;
 }
 
 .navbar {
@@ -52,24 +52,24 @@
     transform: scaleX(1);
     transform-origin: bottom left;
 }
-
-
+         
 .customButton {
-    margin-top: 108px;
-    background-color: #4B0082; /* Dark purple color */
-    color: white; /* White text color */
-    border: 1px solid #fff; /* No border */
-    padding: 10px 20px; /* Padding around the text */
-    text-align: center; /* Center the text inside the button */
-    text-decoration: none; /* No underline on the text */
-    display: inline-block; /* Allow the button to sit in line with other elements */
-    font-size: 16px; /* Set the font size */
-    border-radius: 50px; /* Rounded corners with a large radius to make it pill-shaped */
-    cursor: pointer; /* Change mouse cursor on hover */
-    font-weight: bold;
+    background-image: linear-gradient(to right, #000000 0%, #b60dab96  51%, #000000  100%);
+    margin-top: 235px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    border-radius: 30px;
+    display: block;
   }
-  
+
   .customButton:hover {
-    background-color: #5C00A1; /* Slightly lighter purple on hover */
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
   }
-  
+ 
+
