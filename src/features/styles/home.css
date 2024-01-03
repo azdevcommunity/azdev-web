@@ -53,3 +53,23 @@
     transform: scaleX(1);
     transform-origin: bottom left;
 }
+
+
+.customButton {
+    background-color: #4B0082; /* Dark purple color */
+    color: white; /* White text color */
+    border: 1px solid #fff; /* No border */
+    padding: 10px 20px; /* Padding around the text */
+    text-align: center; /* Center the text inside the button */
+    text-decoration: none; /* No underline on the text */
+    display: inline-block; /* Allow the button to sit in line with other elements */
+    font-size: 16px; /* Set the font size */
+    border-radius: 50px; /* Rounded corners with a large radius to make it pill-shaped */
+    cursor: pointer; /* Change mouse cursor on hover */
+    font-weight: bold;
+  }
+  
+  .customButton:hover {
+    background-color: #5C00A1; /* Slightly lighter purple on hover */
+  }
+  
