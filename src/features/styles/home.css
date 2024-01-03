@@ -1,0 +1,55 @@
+
+.developerSection{
+    line-height: 75px;
+}
+.homeContainer{
+    background-image: url("/assets/home/bgFinal.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.headerTextBg {
+    background-image: linear-gradient(to left, #FDA000, #D3208B,#872AF2);
+    background-clip: text;
+    width: max-content;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.navbar {
+    padding-top: 52px;
+}
+.navbarItem{
+    font-weight: bold;
+}
+.navbar >div:not(:last-child){
+    margin-right: 50px;
+}
+
+.navbarItem {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+}
+
+.navbarItem::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform-origin: bottom right;
+    transition: transform 0.30s ease-out;
+}
+
+.navbarItem:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
