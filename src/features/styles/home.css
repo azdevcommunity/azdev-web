@@ -1,15 +1,24 @@
-.developerSection > div{
-    /* line-height:0.9  ; */
+.developerSection {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 50vh;
+    max-width: 35%;
+    min-width: 35%;
+    margin-right: auto;
 }
-.homeContainer{
+
+.homeContainer {
     background-image: url("/assets/home/bgFinal.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 100vh;
 }
+
 .headerTextBg {
-    background-image: linear-gradient(to left, #FDA000, #D3208B,#872AF2);
+    background-image: linear-gradient(to left, #FDA000, #D3208B, #872AF2);
     background-clip: text;
     width: max-content;
     -webkit-background-clip: text;
@@ -22,16 +31,19 @@
 .navbar {
     padding-top: 52px;
 }
-.navbarItem{
+
+.navbarItem {
     font-weight: bold;
 }
-.navbar >div:not(:last-child){
+
+.navbar>div:not(:last-child) {
     margin-right: 50px;
 }
 
 .navbarItem {
     display: inline-block;
     position: relative;
+    font-size: 18px;
     color: #fff;
 }
 
@@ -40,7 +52,7 @@
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    height: 1px;
+    height: 2px;
     bottom: 0;
     left: 0;
     background-color: #fff;
@@ -52,24 +64,25 @@
     transform: scaleX(1);
     transform-origin: bottom left;
 }
-         
+
 .customButton {
-    background-image: linear-gradient(to right, #000000 0%, #b60dab96  51%, #000000  100%);
-    margin-top: 235px;
+    background-image: linear-gradient(to right, #000000 0%, #b60dab96 51%, #000000 100%);
+
     padding: 15px 45px;
+    font-size: 18px;
     text-align: center;
     text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
-    color: white;            
+    color: white;
+    margin-left: 0 !important;
+    margin-top: 20px;
     border-radius: 30px;
     display: block;
-  }
+}
 
-  .customButton:hover {
-    background-position: right center; /* change the direction of the change here */
+.customButton:hover {
+    background-position: right center;
     color: #fff;
     text-decoration: none;
-  }
- 
-
+}
