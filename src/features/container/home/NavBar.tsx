@@ -6,7 +6,7 @@ const NavBar = () => {
 
 
                 <NavbarItem>Home</NavbarItem>
-                <NavbarItem>Pages</NavbarItem>
+                <NavbarItem path="/about-us">About us</NavbarItem>
                 <NavbarItem>Elements</NavbarItem>
                 <NavbarItem>Demos</NavbarItem>
                 <NavbarItem>Login</NavbarItem>
