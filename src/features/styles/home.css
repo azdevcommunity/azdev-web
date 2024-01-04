@@ -1,38 +1,49 @@
-
-.developerSection{
-    line-height: 75px;
+.developerSection {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 50vh;
+    max-width: 50%;
+    min-width: 35%;
+    margin-right: auto;
 }
-.homeContainer{
+
+.homeContainer {
     background-image: url("/assets/home/bgFinal.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 100vh;
 }
+
 .headerTextBg {
-    background-image: linear-gradient(to left, #FDA000, #D3208B,#872AF2);
+    background-image: linear-gradient(to left, #FDA000, #D3208B, #872AF2);
     background-clip: text;
     width: max-content;
     -webkit-background-clip: text;
     color: transparent;
     background-position: center;
     background-size: cover;
-
+    line-height: 1 !important;
 }
 
 .navbar {
     padding-top: 52px;
 }
-.navbarItem{
+
+.navbarItem {
     font-weight: bold;
 }
-.navbar >div:not(:last-child){
+
+.navbar>div:not(:last-child) {
     margin-right: 50px;
 }
 
 .navbarItem {
     display: inline-block;
     position: relative;
+    font-size: 18px;
     color: #fff;
 }
 
@@ -41,7 +52,7 @@
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    height: 1px;
+    height: 2px;
     bottom: 0;
     left: 0;
     background-color: #fff;
@@ -52,4 +63,28 @@
 .navbarItem:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+.customButton {
+    background-image: linear-gradient(to right, #050205 0%, #C222A2 51%, #050205 100%);
+
+    padding: 15px 45px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    /* font style must be upppercase */
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    margin-left: 0 !important;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: block;
+}
+
+.customButton:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
 }
