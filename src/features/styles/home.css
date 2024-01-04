@@ -4,7 +4,7 @@
     align-items: flex-start;
     flex-direction: column;
     height: 50vh;
-    max-width: 40%;
+    max-width: 50%;
     min-width: 35%;
     margin-right: auto;
 }
@@ -66,11 +66,13 @@
 }
 
 .customButton {
-    background-image: linear-gradient(to right, #000000 0%, #b60dab96 51%, #000000 100%);
+    background-image: linear-gradient(to right, #050205 0%, #C222A2 51%, #050205 100%);
 
     padding: 15px 45px;
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
+    font-weight: bold;
+    /* font style must be upppercase */
     text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
