@@ -1,16 +1,11 @@
 import NavbarItem from "../../components/home/NavbarItem.tsx";
-
+import useHideNavbarOnScroll from "../../hooks/useHideNavbarOnScroll.ts";
 const NavBar = () => {
+    useHideNavbarOnScroll();
     return (
-        <nav className="navbar w-full flex justify-center items-center  ">
-
-
-                <NavbarItem>Home</NavbarItem>
-                <NavbarItem path="/about-us">About us</NavbarItem>
-                <NavbarItem>Elements</NavbarItem>
-                <NavbarItem>Demos</NavbarItem>
-                <NavbarItem>Login</NavbarItem>
-
+        <nav className="navbar w-full flex justify-center items-center">
+            <NavbarItem path="home">Home</NavbarItem>
+            <NavbarItem path="about-us">About us</NavbarItem>
         </nav>
     );
 };
