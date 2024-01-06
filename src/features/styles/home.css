@@ -35,12 +35,8 @@ html {
 }
 
 .aboutUsImage {
-    height: 200px;
-    /* Adjusted for responsiveness */
-    max-height: 450px;
-    width: 100%;
-    /* Adjusted for responsiveness */
-    max-width: 450px;
+    height: 390px;
+    width: 390px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -50,8 +46,9 @@ html {
 .aboutUsSection {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: row-reverse;
+    width: 100%;
 }
 
 
@@ -138,6 +135,7 @@ html {
 }
 
 .aboutUsText {
+    
     font-size: 3vw;
 }
 
@@ -176,7 +174,7 @@ html {
     background-size: 200% auto;
     color: white;
     margin-left: 0 !important;
-    margin-top: 20px;
+    margin-top: 10px;
     border-radius: 20px;
     display: block;
 }
@@ -253,21 +251,34 @@ html {
     color: #fff;
 }
 
-@media (max-width: 992px) {
-    .counter {
-        margin-bottom: 40px;
-    }
-}
 
+
+
+
+/* medias */
 
 
 @media screen and (max-width: 992px) {
+    .counter {
+        margin-bottom: 40px;
+    }
     .animate-charcter {
         font-size: 8vw;
         /* Smaller font size for smaller devices */
     }
 
-    .aboutUsSection,
+    .aboutUsText {
+        margin-left: 5vw;
+    }
+
+    .aboutUsImage {
+        margin-left: 10px !important;
+        margin-bottom: auto;
+        margin-right: 5vw;
+        height: 340px; /* Adjust height as needed */
+        width: 340px; /* Adjust width as needed */
+    }
+
     .homeContainer,
     .section {
         flex-direction: column;
@@ -301,11 +312,74 @@ html {
     }
 
     .customButton {
-        padding: 10px 30px;
+        padding: 1.5vw 4vw;
         /* Smaller padding for smaller screens */
-        font-size: 16px;
+        font-size: 2.5vw;
         /* Smaller font size for smaller buttons */
     }
 
     /* Adjust other elements as needed */
+}
+
+@media screen and (max-width:888px){
+    .aboutUsImage {
+        margin-left: auto;
+        margin-bottom: auto;
+        margin-right: 5vw;
+        height: 30vw; /* Adjust height as needed */
+        width: 30vw; /* Adjust width as needed */
+    }
+}
+
+/* Example media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .aboutUsImage {
+        margin-left: auto;
+        margin-bottom: auto;
+        height: 150px; /* Adjust height as needed */
+        width: 150px; /* Adjust width as needed */
+    }
+}
+
+/* Additional media query for even smaller screens */
+@media (max-width: 480px) {
+    .aboutUsImage {
+        margin-left: auto;
+        margin-bottom: auto;
+        height: 100px; /* Adjust height as needed */
+        width: 100px; /* Adjust width as needed */
+    }
+
+    .developerSection {
+        font-size: 12vw;
+    }
+    .animate-charcter {
+        font-size: 16vw;
+        /* Smaller font size for smaller devices */
+    }
+
+    .customButton{
+        width: 40%;
+        font-size: 4vw;
+    }
+
+    .aboutUsText {
+        width: 70vw;
+        font-size: 8vw;
+    }
+
+
+    .aboutUsSectionheaderTextBg {
+        width: 70vw;
+        font-size: 8vw;
+    }
+
+    .aboutUsImage {
+        margin-left: auto;
+        margin-bottom: 50%;
+        height: 67px; /* Adjust height as needed */
+        width: 670px; /* Adjust width as needed */
+    }
+
+    
 }
