@@ -38,6 +38,7 @@ html {
     height: 390px;
     width: 390px;
     background-repeat: no-repeat;
+    box-shadow: 0 0 40px 0 rgb(34, 35, 76, 0.4);
     background-size: cover;
     background-position: center;
     background-image: url("/assets/home/about_us_3d.png");
@@ -135,7 +136,7 @@ html {
 }
 
 .aboutUsText {
-    
+
     font-size: 3vw;
 }
 
@@ -207,7 +208,7 @@ html {
     padding-bottom: 1.5vw;
     width: 10vw;
     background-color: #08040D;
-    box-shadow: 0 0 35px 0 rgb(34, 35, 76, 5);
+    box-shadow: 0 0 40px 0 rgb(34, 35, 76, 0.5);
     margin-bottom: 60px;
 }
 
@@ -255,6 +256,7 @@ html {
 
 
 
+
 /* medias */
 
 
@@ -262,6 +264,7 @@ html {
     .counter {
         margin-bottom: 40px;
     }
+
     .animate-charcter {
         font-size: 8vw;
         /* Smaller font size for smaller devices */
@@ -275,8 +278,10 @@ html {
         margin-left: 10px !important;
         margin-bottom: auto;
         margin-right: 5vw;
-        height: 340px; /* Adjust height as needed */
-        width: 340px; /* Adjust width as needed */
+        height: 340px;
+        /* Adjust height as needed */
+        width: 340px;
+        /* Adjust width as needed */
     }
 
     .homeContainer,
@@ -294,7 +299,7 @@ html {
     .stats-line-black {
         width: 3vw;
         margin: 7px auto 0;
-        
+
     }
 
     .counter {
@@ -303,7 +308,7 @@ html {
         padding-bottom: 1.6vw;
     }
 
-    .stats-text{
+    .stats-text {
         margin-top: 8px;
     }
 
@@ -321,13 +326,15 @@ html {
     /* Adjust other elements as needed */
 }
 
-@media screen and (max-width:888px){
+@media screen and (max-width:888px) {
     .aboutUsImage {
         margin-left: auto;
         margin-bottom: auto;
         margin-right: 5vw;
-        height: 30vw; /* Adjust height as needed */
-        width: 30vw; /* Adjust width as needed */
+        height: 30vw;
+        /* Adjust height as needed */
+        width: 30vw;
+        /* Adjust width as needed */
     }
 }
 
@@ -336,50 +343,80 @@ html {
     .aboutUsImage {
         margin-left: auto;
         margin-bottom: auto;
-        height: 150px; /* Adjust height as needed */
-        width: 150px; /* Adjust width as needed */
+        height: 150px;
+        /* Adjust height as needed */
+        width: 150px;
+        /* Adjust width as needed */
     }
+
+    .stats-text ,.count-number{
+        font-size: 4vw;
+    }
+    .counter {
+        padding-bottom: 4vw;
+        padding-top: 2vw;
+        padding-left: 3vw;
+        padding-right: 3vw;
+        width: 28vw;
+    }
+
+    .stats-line-black {
+        margin-top: 1vw !important;
+        width: 10vw;
+    }
+    
 }
 
 /* Additional media query for even smaller screens */
 @media (max-width: 480px) {
-    .aboutUsImage {
-        margin-left: auto;
-        margin-bottom: auto;
-        height: 100px; /* Adjust height as needed */
-        width: 100px; /* Adjust width as needed */
-    }
+  
 
     .developerSection {
         font-size: 12vw;
     }
+
     .animate-charcter {
         font-size: 16vw;
         /* Smaller font size for smaller devices */
     }
 
-    .customButton{
+    .customButton {
         width: 40%;
         font-size: 4vw;
     }
 
-    .aboutUsText {
-        width: 70vw;
-        font-size: 8vw;
+    .aboutUsText, .aboutUsSectionheaderTextBg {
+        width: 55vw;
+        font-size: 6vw;
     }
 
-
-    .aboutUsSectionheaderTextBg {
-        width: 70vw;
-        font-size: 8vw;
-    }
 
     .aboutUsImage {
         margin-left: auto;
-        margin-bottom: 50%;
-        height: 67px; /* Adjust height as needed */
-        width: 670px; /* Adjust width as needed */
+        height: 31.5vw;
+        width: 40vw;
     }
 
+    .counter {
+        padding-bottom: 4vw;
+        padding-top: 2vw;
+        padding-left: 3vw;
+        padding-right: 3vw;
+        width: 28vw;
+    }
+
+    .stats-line-black {
+        margin-top: 1vw !important;
+        width: 10vw;
+    }
+
+    .stats-text ,.count-number{
+        font-size: 4vw;
+    }
+
+    .statisticCounterContainer {
+        width: 50%;
+    }
     
+
 }
