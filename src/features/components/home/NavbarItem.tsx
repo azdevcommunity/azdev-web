@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from "react";
+import { FC, ReactNode } from "react";
 // useNavigate is no longer needed since we're not routing, but scrolling within the page
 // import { useNavigate } from "react-router-dom";
 // import routing from "../../utils/routing.ts"; // This can be removed if not used elsewhere
