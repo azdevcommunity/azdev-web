@@ -89,14 +89,12 @@
     color: #fff;
     width: 100%;
     margin-top: 10px;
-    margin-bottom: 0;
     font-weight: bold;
     line-height: 1.1!important;
     margin-bottom: 3vw;
     background-image: linear-gradient(to left, #FDA000, #D3208B, #872AF2);
     background-clip: text;
     -webkit-background-clip: text;
-    color: transparent;
     background-position: center;
     background-size: cover;
 }
@@ -318,12 +316,9 @@
     .homeContainer,
     .section {
         flex-direction: column;
-        /* Stack elements for smaller screens */
     }
 
     .navbarItem {
-        /* Adjust navbar styles for smaller screens */
-
         font-size: 3vw;
     }
 
@@ -383,10 +378,7 @@
         font-size: 4vw;
     }
     .counter {
-        padding-bottom: 4vw;
-        padding-top: 2vw;
-        padding-left: 3vw;
-        padding-right: 3vw;
+        padding: 2vw 3vw 4vw;
         width: 28vw;
     }
 
