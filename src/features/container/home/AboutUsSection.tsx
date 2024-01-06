@@ -36,7 +36,7 @@ const AboutUsSection = () => {
                 <div className="aboutUsImage mr-8">
 
                 </div>
-                <div>
+                <div className='aboutUsText'>
                     <div style={{ lineHeight: "0.8" }}>Biz insanların proqramlaşdırma</div>
                     <div style={{ lineHeight: "0.8" }}>haqqında düşüncə tərzini dəyişirik.</div>
                     <div className={"aboutUsSectionheaderTextBg"} >

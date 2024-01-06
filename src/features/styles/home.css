@@ -3,19 +3,7 @@ html {
 }
 
 .animate-charcter {
-    background-image: linear-gradient(-225deg,
-            /* #44107a 0%, */
-            #872AF2 0%,
-            #D3208B 10%,
-            #D3208B 15%,
-            #FDA000 39%,
-            #FDA000 47%,
-            #872AF2 67%,
-            #D3208B 80%,
-            #FDA000 100%
-            /* #ff1361 67%,
-    #fff800 100% */
-        );
+    background-image: linear-gradient(-225deg, #872AF2 0%, #D3208B 10%, #D3208B 15%, #FDA000 39%, #FDA000 47%, #872AF2 67%, #D3208B 80%, #FDA000 100%);
     background-size: auto auto;
     background-clip: border-box;
     background-size: 200% auto;
@@ -26,7 +14,10 @@ html {
     -webkit-text-fill-color: transparent;
     animation: textclip 2s linear 1;
     display: inline-block;
-    font-size: 190px;
+    font-size: 10vw;
+    /* Responsive font size */
+    max-font-size: 190px;
+    /* Maximum font size */
 }
 
 @keyframes textclip {
@@ -38,20 +29,22 @@ html {
 .section {
     min-height: 100vh;
     display: flex;
-    min-width: 200vh;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
 .aboutUsImage {
-    height: 450px;
-    width: 450px;
+    height: 200px;
+    /* Adjusted for responsiveness */
+    max-height: 450px;
+    width: 100%;
+    /* Adjusted for responsiveness */
+    max-width: 450px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-image: url("/assets/home/about_us_3d.png");
-
 }
 
 .aboutUsSection {
@@ -140,8 +133,16 @@ html {
 .navbarItem {
     display: inline-block;
     position: relative;
-    font-size: 18px;
+    font-size: 1.2vw;
     color: #fff;
+}
+
+.aboutUsText {
+    font-size: 3vw;
+}
+
+.statisticCounterContainer {
+    font-size: 1.2vw;
 }
 
 .navbarItem::after {
@@ -194,7 +195,7 @@ html {
 .parentCounterContainer {
     margin-top: 50px;
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-evenly;
     flex-direction: row;
     text-align: center;
@@ -203,21 +204,17 @@ html {
 .counter {
     display: block;
     border: #fff solid 1px;
-    padding: 20px 20px;
     border-radius: 10px;
-    width: 200px;
-    min-width: 150px;
-    height: 165px;
-    min-height: 115px;
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
+    width: 10vw;
     background-color: #08040D;
-    box-shadow: 0 0 35px 0 rgb(34, 35, 76,5);
-
-
+    box-shadow: 0 0 35px 0 rgb(34, 35, 76, 5);
     margin-bottom: 60px;
 }
 
 .count-title {
-    font-size: 45px;
+    font-size: 1.5vw;
     font-weight: bold;
     font-style: 'SFProDisplay', sans-serif !important;
     margin-top: 10px;
@@ -227,8 +224,12 @@ html {
     color: #fff;
 }
 
+.developerSection {
+    font-size: 6vw;
+}
+
 .stats-text {
-    font-size: 25px;
+    font-size: 1.5vw;
     font-weight: bold;
     margin-top: 15px;
     margin-bottom: 0;
@@ -256,4 +257,55 @@ html {
     .counter {
         margin-bottom: 40px;
     }
+}
+
+
+
+@media screen and (max-width: 992px) {
+    .animate-charcter {
+        font-size: 8vw;
+        /* Smaller font size for smaller devices */
+    }
+
+    .aboutUsSection,
+    .homeContainer,
+    .section {
+        flex-direction: column;
+        /* Stack elements for smaller screens */
+    }
+
+    .navbarItem {
+        /* Adjust navbar styles for smaller screens */
+
+        font-size: 3vw;
+    }
+
+    .stats-line-black {
+        width: 3vw;
+        margin: 7px auto 0;
+        
+    }
+
+    .counter {
+        width: 13vw;
+        padding-top: 0.2vw;
+        padding-bottom: 1.6vw;
+    }
+
+    .stats-text{
+        margin-top: 8px;
+    }
+
+    .developerSection {
+        margin-left: 0px !important;
+    }
+
+    .customButton {
+        padding: 10px 30px;
+        /* Smaller padding for smaller screens */
+        font-size: 16px;
+        /* Smaller font size for smaller buttons */
+    }
+
+    /* Adjust other elements as needed */
 }
