@@ -33,7 +33,7 @@ const AboutUsSection = () => {
     return (
         <>
             <div className={"aboutUsSection text-gray-100 text-5xl font-bold ml-18"}>
-                <div className="aboutUsImage mr-8">
+                <div className="aboutUsImage">
 
                 </div>
                 <div className='aboutUsText'>
