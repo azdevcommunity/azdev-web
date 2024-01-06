@@ -36,6 +36,8 @@
     background-image: url("/assets/home/about_us_3d.png");
 }
 
+
+
 .aboutUsSection {
     display: flex;
     align-items: center;
@@ -48,6 +50,55 @@
 
 .statisticCounterText {
     margin-top: 10px;
+}
+
+.section#blog {
+    background-color: #08040D;
+    width: 100%;
+    height: 100vh;
+    flex-direction: row;
+    align-items: center;
+}
+
+.blogWindowImage {
+    height: 100%;
+    width: 800px;
+    min-width: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("/assets/home/windows.png");
+
+}
+
+.blogText{
+    
+    margin-left: 5vw;
+    font-size: 1.8vw;
+    color: #fff;
+    width: 50vw;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-weight: bold;
+    line-height: 1.15 !important;
+
+}
+
+.blogTextHeader{
+    font-size: 5vw;
+    color: #fff;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-weight: bold;
+    line-height: 1.1!important;
+    margin-bottom: 3vw;
+    background-image: linear-gradient(to left, #FDA000, #D3208B, #872AF2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-position: center;
+    background-size: cover;
 }
 
 .section#about-us {
