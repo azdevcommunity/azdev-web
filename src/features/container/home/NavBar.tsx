@@ -1,5 +1,5 @@
-import NavbarItem from "@/features/components/home/NavbarItem.tsx";
-import {FC} from "react";
+ import   {FC} from "react";
+ import NavbarItem from "../../components/home/NavbarItem.tsx";
 
 
 interface Props {
