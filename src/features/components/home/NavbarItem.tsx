@@ -19,10 +19,8 @@ function isInViewport(element : any) {
 }
 
 
-// Use the FC (Function Component) type from React with Props
 const NavbarItem: FC<Props> = ({ children, path }) => {
     const handleClick = () => {
-        // Make sure to check if path is provided
         if (path) {
             const section = document.getElementById(path);
             if (section && !isInViewport(section)) {

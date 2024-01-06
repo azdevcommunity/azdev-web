@@ -13,7 +13,6 @@ const HomePage = () => {
             <div id="about-us" className="section">
                 <AboutUsSection />
             </div>
-            {/* Add more sections with respective ids here */}
         </div>
     );
 };
