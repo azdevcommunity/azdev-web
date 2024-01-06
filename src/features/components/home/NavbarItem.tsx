@@ -1,38 +1,21 @@
-import { FC, ReactNode } from "react";
-// useNavigate is no longer needed since we're not routing, but scrolling within the page
-// import { useNavigate } from "react-router-dom";
-// import routing from "../../utils/routing.ts"; // This can be removed if not used elsewhere
+import {FC, ReactNode} from "react";
 
 interface Props {
     children: ReactNode,
-    path?: string
-}
-
-function isInViewport(element : any) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
+    path?: string,
 }
 
 
-const NavbarItem: FC<Props> = ({ children, path }) => {
-    const handleClick = () => {
-        if (path) {
-            const section = document.getElementById(path);
-            if (section && !isInViewport(section)) {
-                section.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-    };
+const NavbarItem: FC<Props> = ({children, path}) => {
+
 
     return (
-        <div onClick={handleClick} className="navbarItem uppercase cursor-pointer text-gray-200">
-            {children}
+        <div className="navbarItem block uppercase cursor-pointer text-gray-200">
+            <a href={path}>
+                {children}
+            </a>
         </div>
+
     );
 };
 

@@ -1,11 +1,17 @@
 import NavbarItem from "../../components/home/NavbarItem.tsx";
-import useHideNavbarOnScroll from "../../hooks/useHideNavbarOnScroll.ts";
-const NavBar = () => {
-    useHideNavbarOnScroll();
+import {FC} from "react";
+
+
+interface Props {
+
+}
+const NavBar :FC<Props>= () => {
+
+
     return (
         <nav className="navbar w-full flex justify-center items-center">
-            <NavbarItem path="home">Home</NavbarItem>
-            <NavbarItem path="about-us">About us</NavbarItem>
+            <NavbarItem path="#home">Home</NavbarItem>
+            <NavbarItem   path="#about-us">About us</NavbarItem>
         </nav>
     );
 };

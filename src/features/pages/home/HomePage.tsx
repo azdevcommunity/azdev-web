@@ -4,15 +4,12 @@ import './../../styles/home.css'
 import AboutUsSection from "../../container/home/AboutUsSection.tsx";
 
 const HomePage = () => {
+
     return (
         <div className={"homeContainer"}>
-            <NavBar />
-            <div id="home" className="section">
-                <HomeSection />
-            </div>
-            <div id="about-us" className="section">
-                <AboutUsSection />
-            </div>
+            <NavBar  />
+            <HomeSection />
+            <AboutUsSection/>
         </div>
     );
 };
