@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 
 const getDurationPerIncrement = (end: number): number => {
-    if (end <= 100) return 50;         // Slower pace for numbers up to 100
-    if (end <= 200) return 25;         // Faster pace for numbers 101-200
-    if (end <= 300) return 12.5;       // Even faster for 201-300
-    return 0;                         // Fastest pace for numbers above 300
+    if (end <= 100) return 50;
+    if (end <= 200) return 25;
+    if (end <= 300) return 12.5;
+    return 0;
 };
 
 const useCounter = (end: number): number => {
@@ -44,16 +44,17 @@ const AboutUsSection = () => {
                         başlamaq
                         <span className={"text-white"}> üçün ən yaxşı vaxtdır!</span>
                     </div>
-                    <div className="statisticCounterContainer">
-                        <div className="container">
-                            <div className="row text-center">
-                                <div className="parentCounterContainer col-xs-12 col-md-3">
-                                    <div className="counter">
-                                        <h2 className="timer count-title count-number">{count}</h2>
-                                        <div className="stats-line-black"></div>
-                                        <p className="stats-text">İstifadəçilər</p>
-                                    </div>
-                                </div>
+
+                </div>
+            </div>
+            <div className="statisticCounterContainer">
+                <div className="container">
+                    <div className="row text-center">
+                        <div className="parentCounterContainer col-xs-12 col-md-3">
+                            <div className="counter">
+                                <h2 className="timer count-title count-number">{count}</h2>
+                                <div className="stats-line-black"></div>
+                                <p className="stats-text">İstifadəçilər</p>
                             </div>
                         </div>
                     </div>
