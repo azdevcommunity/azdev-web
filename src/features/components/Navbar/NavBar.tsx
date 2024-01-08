@@ -16,8 +16,9 @@ const NavBar: FC<NavbarProps> = () => {
                 <div className={`${style.navbarItemsContainer}`}>
                     <NavbarItem path="#home">Ana səhifə</NavbarItem>
                     <NavbarItem path="#blog">Bloq</NavbarItem>
-                    <NavbarItem path="#forum">Forum</NavbarItem>
-                    <NavbarItem onClick={() => { }}>Daxil ol</NavbarItem>
+                    <NavbarItem path="#post">Forum</NavbarItem>
+                    <NavbarItem id="joinUsBtn">Qatıl</NavbarItem>
+                    <NavbarItem onClick={() => {}}>Daxil ol</NavbarItem>
                 </div>
             </nav>
         </div>

@@ -6,6 +6,7 @@
     display: flex;
     justify-content: flex-end;
     padding-right: 55px;
+    
 }
 
 .navbarItemButton {
@@ -47,7 +48,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    z-index: 10;
+    z-index: 1000;
     width: 100%;
 }
 
@@ -56,10 +57,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 30%;
+    width: 40%;
 }
 
-.navbarItemsContainer > *:not(:last-child) {
+.navbarItemsContainer > *:not(:last-child) *:not(.joinUsBtn) {
     margin-right: 30px;
 }
 
@@ -81,6 +82,28 @@
     font-size: 1.2rem;
     color: #fff;
 }
+
+.joinUsBtn:hover{
+    background-color: #EBEBEB;
+    border-radius: 5px;
+    color: #171717;
+    border: 2px solid #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 6px 15px;
+}
+
+.joinUsBtn {
+    background-color: transparent;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.2rem;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 6px 15px;
+    margin-right: 0 !important;
+}
+
 
 
 

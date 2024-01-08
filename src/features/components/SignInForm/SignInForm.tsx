@@ -63,7 +63,7 @@ const SignInForm: React.FC = () => {
                     <GithubSignInButton onClick={handleGithubSignIn} />
                 </div>
                 <div className={style.register}>
-                    Hələ hesabınız yoxdur?<a href="/register" className={style.registerText}>Qeydiyyatdan keçin!</a>
+                    Hesabın yoxdur?<a href="/register" className={style.registerText}>Qeydiyyatdan keç!</a>
                 </div>
             </form>
         </div>
