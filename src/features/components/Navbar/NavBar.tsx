@@ -3,15 +3,11 @@ import style from '../../styles/home.module.css'
 import { FC } from "react";
 
 
-interface Props {
-
-}
-const NavBar: FC<Props> = () => {
-
+ 
+const NavBar: FC<NavbarProps> = () => {
 
     return (
         <div className={`${style.navbarContainer}`}>
-
             <nav className={`${style.navbar}`}>
                 <div className={`${style.logoContainer}`} >
                     {/* <img src="/logo.png" alt="logo" /> */}
