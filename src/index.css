@@ -1,13 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-html{
+
+html {
     scroll-behavior: smooth;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'SF Pro Display', sans-serif;
 }
 
+
+.top-shadow {
+    @apply fixed top-0 left-0 w-full z-10 shadow-custom;
+}
