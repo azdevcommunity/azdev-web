@@ -1,3 +1,3 @@
-interface Props {
+interface NavbarProps {
 
 }

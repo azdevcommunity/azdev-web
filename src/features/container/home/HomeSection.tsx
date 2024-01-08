@@ -11,7 +11,6 @@ const HomeSection: React.FC = () => {
                 <div className={`${style.signInBlockContainer}`}>
                     <SignInForm />
                 </div>
-                
             </div>
             <div className={style.customShadowBottom}></div>
             <div className={style.homeImage}></div>

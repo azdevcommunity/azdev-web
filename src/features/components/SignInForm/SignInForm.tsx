@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import style from './signInForm.module.css';
+import GoogleSignInButton from '../GoogleSignInButton/GoogleSignInButton';
+import GithubSignInButton from '../GithubSignInButton/GithubSignInButton';
 
 const SignInForm: React.FC = () => {
     const [email, setEmail] = useState('');
@@ -18,6 +20,15 @@ const SignInForm: React.FC = () => {
         // Here you would usually send a request to your server
         console.log('Email:', email, 'Password:', password);
     };
+    const handleGoogleSignIn = () => {
+        // Handle the sign-in logic here
+        console.log('Sign in with Google clicked');
+      };
+
+    const handleGithubSignIn = () => {
+        // Handle the sign-in logic here
+        console.log('Sign in with Github clicked');
+      };
 
     return (
         <div className={style.signInFormContainer}>
@@ -48,12 +59,8 @@ const SignInForm: React.FC = () => {
                     <button type="submit" className={style.submitButton}>Daxil ol</button>
                 </div>
                 <div className={style.socialLogin}>
-                    <button className={`${style.socialButton} ${style.google}`}>
-                        <i className='fa fa-home'></i>Google ilə daxil ol
-                    </button>
-                    <button className={`${style.socialButton} ${style.apple}`}>
-                        <img src='../../../../public/assets/home/apple_icon_2.png'/>Apple ilə daxil ol
-                    </button>
+                    <GoogleSignInButton onClick={handleGoogleSignIn} />
+                    <GithubSignInButton onClick={handleGithubSignIn} />
                 </div>
                 <div className={style.register}>
                     Hələ hesabınız yoxdur?<a href="/register" className={style.registerText}>Qeydiyyatdan keçin!</a>

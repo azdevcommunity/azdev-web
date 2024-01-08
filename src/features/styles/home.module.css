@@ -9,8 +9,10 @@
 }
 
 .navbarItemButton {
-    background-color: #fff;
-    color: black;
+    /* background-color: #fff; */
+    background-color: #00B0FF;
+    /* color: black; */
+    color: #fff;
     padding: 0;
     border-radius: 5px;
     text-transform: uppercase;
@@ -21,9 +23,10 @@
 }
 
 .navbarItemButton:hover {
-    background-color: #e6e6e6;
+    /* background-color: #e6e6e6; */
+    /* color: #fff; */
+    background-color: #25baff;
 }
-
 .logoContainer{
     display: flex;
     flex-direction: row;
@@ -128,12 +131,12 @@
 
 .homeImage{
 
-    width: 58%;
+    width: 43%;
     height: 58%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('.../../../../../public/assets/home/home_section_3d.png');
+    background-image: url('.../../../../../public/assets/home/homeimg.png');
     margin-right: 120px;
 
 
