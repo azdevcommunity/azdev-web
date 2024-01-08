@@ -1,0 +1,104 @@
+
+
+.signInFormContainer {
+    width: 353px;
+    height: 500px;
+    border-radius: 13px;
+    padding: 45px 30px;
+    background-color: #141418;
+    /* box shadow with #122531 */
+    box-shadow: 0px 8px 100px rgba(18, 37, 49, 2);
+    font-family: 'SF Pro Display', sans-serif;
+    /* Add more styles for the form container */
+}
+
+
+.inputGroup :not(.submitButton){
+    margin-bottom: 20px;
+}
+
+
+
+.inputHeader{
+    font-weight: 600;
+    color: white;
+}
+
+.inputField {
+    font-weight: 500;
+    width: 100%;
+    padding: 12px 10px;
+    margin-top: 9px;
+    color: white;
+    border-radius: 10px;
+    background-color: #24252C;
+    /* Add more styles for input fields */
+}
+
+.submitButton {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    margin-top: 0;
+    background-color: #00B0FF;
+    border-radius: 10px;
+    color: white;
+    /* Add more styles for submit button */
+}
+
+.submitButton:hover {
+    background-color: #25baff;
+    /* Add more styles for submit button hover */
+}
+
+.socialLogin {
+    
+    /* Add more styles for social login buttons */
+}
+
+.socialButton {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: #373742;
+    color: white;
+    font-weight: lighter;
+    /* Add more styles for social buttons */
+}
+
+.socialButton:hover {
+    background-color: #434452;
+    /* Add more styles for social buttons hover */
+}
+
+.google {
+    /* Google button specific styles */
+}
+
+.apple {
+    border: none;
+    cursor: pointer;
+    /* Apple button specific styles */
+}
+
+.register {
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    /* Add more styles for register link */
+}
+
+.registerText {
+    color: #00B0FF;
+    text-decoration: none;
+    /* Add more styles for register link */
+}
+
+
+.apple img {
+    width: 35px;
+    height: 35px;
+}
