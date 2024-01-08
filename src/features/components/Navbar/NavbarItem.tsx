@@ -8,16 +8,17 @@ interface Props {
 }
 
 const NavbarItem: FC<Props> = ({ children, path, onClick }) => {
-    // If 'path' is provided, render as a link, otherwise render as a button
-    const content = path ? (
-        <a href={path} className={`${style.navbarItem}`}>
-            {children}
-        </a>
-    ) : (
-        <button onClick={onClick} className={`${style.navbarItemButton}`}>
-            {children}
-        </button>
-    );
+
+    const content = path
+        ? (
+            <a href={path} className={`${style.navbarItem}`}>
+                {children}
+            </a>
+        ) : (
+            <button onClick={onClick} className={` ${style.navbarItemButton} `}>
+                {children}
+            </button>
+        );
 
     return (
         <div className={`block uppercase cursor-pointer text-gray-200`}>
