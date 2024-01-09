@@ -13,7 +13,7 @@ const HomePage = () => {
                 <NavBar />
                 <HomeSection />
                 <BlogSection />
-                <PostSection />
+                {/* <PostSection /> */}
             </div>
         </>
 
