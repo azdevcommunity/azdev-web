@@ -2,10 +2,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 50px 0;
     background-color: #141418;
     height: 100vh;
+    width: 100%;
+    /* This ensures it doesn't exceed the width of the viewport */
 }
 
 .blogHeaderText {
@@ -13,7 +13,7 @@
     background-image: linear-gradient(to left, #FDA000, #D3208B, #872AF2);
     background-clip: text;
     color: transparent;
-    font-size: 3rem !important;
+    font-size: 4.6vw !important;
     line-height: 1.5 !important;
 
 }
@@ -27,19 +27,31 @@
     color: white;
     font-weight: bold;
     line-height: 1;
-    font-size: 2.3rem;
+    font-size: 4vw;
     margin-top: 50px;
-    width: 70%;
+    width: 95vw;
 }
 
 
 .cardContainer {
-   
     display: flex;
-    gap: 20;
-    justify-content: space-around;
-    width: 60%;
-    margin-top: 50px;
+    gap: 20px;
+    justify-content: center;
     flex-wrap: wrap;
-    flex-direction: row;
+    height: 10vw;
+    margin-top: 50px;
+    padding: 0 10px;
+    /* Add some padding */
+}
+
+
+@media (min-width: 768px) {
+    .cardContainer {
+        justify-content: flex-start;
+        height: 80%;
+        padding: 0 20px;
+        /* Increase padding for larger screens if needed */
+
+    }
+
 }
