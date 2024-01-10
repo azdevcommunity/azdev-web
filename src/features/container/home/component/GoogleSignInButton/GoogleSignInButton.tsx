@@ -8,7 +8,7 @@ interface GoogleSignInButtonProps {
 const GoogleSignInButton: React.FC<GoogleSignInButtonProps> = ({ onClick }) => {
   return (
     <button className="google-sign-in-button" onClick={onClick}>
-      <img src="../../../../public/assets/home/google32.png" className="google-logo" />
+      <img src="../../../../../../public/assets/home/google32.png" className="google-logo" />
       Sign in with Google
     </button>
   );

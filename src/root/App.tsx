@@ -2,18 +2,24 @@ import AppProvider from "./AppProvider"
 import {Route, Routes} from "react-router-dom";
 import HomeLayout from "../features/layout/home/HomeLayout.tsx";
 import HomePage from "../features/pages/home/HomePage.tsx";
+import LoginPage from "../features/pages/login/LoginPage.tsx";
+import DashBoard from "./DashBoard.tsx";
+import RegisterPage from "../features/pages/register/RegisterPage.tsx";
 
 
-const App = () => {
-     return (
+const App = () => (
+    <DashBoard>
         <AppProvider>
-             <Routes>
-                 <Route path={"/"} element={<HomeLayout/>}>
-                     <Route index element={<HomePage/>}/>
-                 </Route>
-             </Routes>
+            <Routes>
+                <Route path={"/"} element={<HomeLayout/>}>
+                    <Route index element={<HomePage/>}/>
+                </Route>
+                <Route path={"/login"} element={<LoginPage/>}/>
+                <Route path={"/register"} element={<RegisterPage/>}/>
+            </Routes>
         </AppProvider>
-    )
-}
+    </DashBoard>
+);
+
 
 export default App

@@ -1,24 +1,30 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import style from './signInForm.module.css';
-import GoogleSignInButton from '../GoogleSignInButton/GoogleSignInButton';
-import GithubSignInButton from '../GithubSignInButton/GithubSignInButton';
+import GoogleSignInButton from '../../container/home/component/GoogleSignInButton/GoogleSignInButton.tsx';
+import GithubSignInButton from '../../container/home/component/GithubSignInButton/GithubSignInButton.tsx';
 
 const SignInForm: React.FC = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [form,setForm]=useState({
+        email:"",
+        password:""
+    })
+    useEffect(() => {
+        console.log(form);
+    }, [form]);
+    const handleChange=(e: React.ChangeEvent<HTMLInputElement>)=>{
+        const name  =e.target.name;
+        const value= e.target.value;
+        setForm(p=>({
+            ...p,
+            [name]:value
+        }));
+    }
 
-    const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setEmail(event.target.value);
-    };
-
-    const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setPassword(event.target.value);
-    };
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         // Here you would usually send a request to your server
-        console.log('Email:', email, 'Password:', password);
+        console.log('Email:', form.email, 'Password:', form.password);
     };
     const handleGoogleSignIn = () => {
         // Handle the sign-in logic here
@@ -39,8 +45,8 @@ const SignInForm: React.FC = () => {
                         type="email"
                         name="email"
                         placeholder="Email adresin"
-                        value={email}
-                        onChange={handleEmailChange}
+                        value={form.email}
+                        onChange={handleChange}
                         className={style.inputField}
                     />
                 </div>
@@ -50,8 +56,8 @@ const SignInForm: React.FC = () => {
                         type="password"
                         name="password"
                         placeholder="Şifrə"
-                        value={password}
-                        onChange={handlePasswordChange}
+                        value={form.password}
+                        onChange={handleChange}
                         className={style.inputField}
                     />
                 </div>

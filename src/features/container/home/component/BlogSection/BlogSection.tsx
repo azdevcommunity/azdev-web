@@ -1,6 +1,6 @@
     import React from 'react';
     import style from './blogSection.module.css';
-    import CategoryCard from '../../../components/CategoryCard/CategoryCard';
+    import CategoryCard from '../CategoryCard/CategoryCard.tsx';
 
     const BlogSection: React.FC = () => {
         return (
