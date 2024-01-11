@@ -6,6 +6,7 @@ const PostSection: React.FC = () => {
         <div className={`${style.postSection}`} id='post'>
             <div>Bizə dünyanı göstər, ilk postunu paylaş!</div>
 
+
         </div>
     );
 };
