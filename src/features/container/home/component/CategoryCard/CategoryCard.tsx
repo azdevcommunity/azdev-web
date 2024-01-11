@@ -57,6 +57,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ title, imageUrl }) => {
     >
       <div className={style.cardImage} style={{ backgroundImage: `url(${imageUrl})` }} />
       <span className={style.cardTitle}>{title}</span>
+      <span> </span>
     </div>
   );
 };

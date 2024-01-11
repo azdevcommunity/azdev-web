@@ -1,10 +1,10 @@
 .card {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     flex-direction: column;
     width: 15vw;
-    border-radius: 1.2vw;
+    border-radius: 3vw;
     overflow: hidden;
     background: #1B3F60;
     height: 14vw;
@@ -23,7 +23,6 @@
     z-index: 100;
     background-size: cover;
     background-position: center;
-    margin-top: 2.5vw;
     order: 2;
 }
 
@@ -37,14 +36,16 @@
 
 @media (max-width: 768px) {
     .card {
-        width: 30vw;
-        height: 20vw;
+        width: 40vw;
+        height: 23vw;
     }
-    .cardTitle{
-        
-        font-size: 3vw;
+
+    .cardTitle {
+        font-size: 4vw;
+        margin-top: 1vw;
     }
-    .cardImage{
-        margin-top: 6vw;
+
+    .cardImage {
+        height: 6vw;
     }
-  }
+}

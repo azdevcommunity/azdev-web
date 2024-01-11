@@ -3,7 +3,8 @@
     flex-direction: column;
     align-items: center;
     background-color: #141418;
-    height: 100vh;
+    height: auto;
+    padding-bottom: 30px;
     width: 100%;
     /* This ensures it doesn't exceed the width of the viewport */
 }
@@ -13,45 +14,51 @@
     background-image: linear-gradient(to left, #FDA000, #D3208B, #872AF2);
     background-clip: text;
     color: transparent;
-    font-size: 4.6vw !important;
-    line-height: 1.5 !important;
-
+    font-size: 4vw !important;
+    line-height: 1.16 !important;
+    /* margin-bottom: 8px; */
+    margin: 10px auto; /*Peyman Babayev :)*/
 }
 
 
 .blogTextsContainer {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     color: white;
     font-weight: bold;
-    line-height: 1;
-    font-size: 4vw;
+    text-align: center;
+    line-height: 1.1;
+    font-size: 3vw;
     margin-top: 50px;
     width: 95vw;
 }
-
 
 .cardContainer {
     display: flex;
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
-    height: 10vw;
     margin-top: 50px;
     padding: 0 10px;
-    /* Add some padding */
 }
+
 
 
 @media (min-width: 768px) {
     .cardContainer {
-        justify-content: flex-start;
-        height: 80%;
+        justify-content: center;
         padding: 0 20px;
-        /* Increase padding for larger screens if needed */
-
     }
 
+    .card {
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 45%;
+    }
 }

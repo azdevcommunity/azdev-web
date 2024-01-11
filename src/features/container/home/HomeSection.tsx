@@ -12,7 +12,9 @@ const HomeSection: React.FC = () => {
                 <SignInForm/>
             </div>
             <div className={style.customShadowBottom}></div>
-            <div className={style.homeImage}></div>
+            <div className={style.homeImage}>
+            <img src=".../../../../../public/assets/home/homeimg.png" className={style.backgroundImage} />
+            </div>
         </div>
     );
 };
