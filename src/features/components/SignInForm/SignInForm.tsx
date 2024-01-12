@@ -2,44 +2,44 @@ import React, {useEffect, useState} from 'react';
 import style from './signInForm.module.css';
 import GoogleSignInButton from '../../container/home/component/GoogleSignInButton/GoogleSignInButton.tsx';
 import GithubSignInButton from '../../container/home/component/GithubSignInButton/GithubSignInButton.tsx';
+import SubmitButton from "../buttons/SubmitButton.tsx";
+import FormContainer from "../form/formcontainer/Formcontainer.tsx";
+import InputGroup from "../form/inputgroup/InputGroup.tsx";
 
 const SignInForm: React.FC = () => {
-    const [form,setForm]=useState({
-        email:"",
-        password:""
+    const [form, setForm] = useState({
+        email: "",
+        password: ""
     })
     useEffect(() => {
         console.log(form);
     }, [form]);
-    const handleChange=(e: React.ChangeEvent<HTMLInputElement>)=>{
-        const name  =e.target.name;
-        const value= e.target.value;
-        setForm(p=>({
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const name = e.target.name;
+        const value = e.target.value;
+        setForm(p => ({
             ...p,
-            [name]:value
+            [name]: value
         }));
     }
 
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        // Here you would usually send a request to your server
         console.log('Email:', form.email, 'Password:', form.password);
     };
     const handleGoogleSignIn = () => {
-        // Handle the sign-in logic here
         console.log('Sign in with Google clicked');
-      };
+    };
 
     const handleGithubSignIn = () => {
-        // Handle the sign-in logic here
         console.log('Sign in with Github clicked');
-      };
+    };
 
     return (
-        <div className={style.signInFormContainer}>
+        <FormContainer>
             <form onSubmit={handleSubmit}>
-                <div className={style.inputGroup}>
+                <InputGroup>
                     <span className={style.inputHeader}>Email</span>
                     <input
                         type="email"
@@ -49,8 +49,8 @@ const SignInForm: React.FC = () => {
                         onChange={handleChange}
                         className={style.inputField}
                     />
-                </div>
-                <div className={style.inputGroup}>
+                </InputGroup>
+                <InputGroup>
                     <span className={style.inputHeader}>Şifrə</span>
                     <input
                         type="password"
@@ -60,19 +60,19 @@ const SignInForm: React.FC = () => {
                         onChange={handleChange}
                         className={style.inputField}
                     />
-                </div>
-                <div className={style.inputGroup}>
-                    <button type="submit" className={style.submitButton}>Daxil ol</button>
-                </div>
+                </InputGroup>
+                <InputGroup>
+                    <SubmitButton>Daxil ol</SubmitButton>
+                </InputGroup>
                 <div className={style.socialLogin}>
-                    <GoogleSignInButton onClick={handleGoogleSignIn} />
-                    <GithubSignInButton onClick={handleGithubSignIn} />
+                    <GoogleSignInButton onClick={handleGoogleSignIn}/>
+                    <GithubSignInButton onClick={handleGithubSignIn}/>
                 </div>
                 <div className={style.register}>
                     Hesabın yoxdur?<a href="/register" className={style.registerText}>Qeydiyyatdan keç!</a>
                 </div>
             </form>
-        </div>
+        </FormContainer>
     );
 };
 
