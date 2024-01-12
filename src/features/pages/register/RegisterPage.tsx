@@ -1,3 +1,4 @@
+import Register from "../../container/register/Register.tsx";
 
 
 const RegisterPage = () => {
@@ -6,7 +7,7 @@ const RegisterPage = () => {
             minHeight:"100vh",
             color:"white"
         }}>
-            RegisterPage
+            <Register/>
         </div>
     );
 };
