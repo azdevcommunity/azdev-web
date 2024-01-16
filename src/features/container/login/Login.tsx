@@ -1,4 +1,4 @@
-import styles from './style/login.module.css';
+import styles from './login.module.css';
 import SignInForm from "../../components/SignInForm/SignInForm.tsx";
 import NavBar from "../../components/Navbar/NavBar.tsx";
 

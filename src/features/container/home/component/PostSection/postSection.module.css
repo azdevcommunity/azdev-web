@@ -1,8 +1,52 @@
 .postSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 50vh;
-    width: 100%;
     background-color: #141418;
+    height: 40%;
+    color: #e7e7de;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.postSection :not(:last-child) {
+    margin-right: 40px;
+}
+
+.title {
+    z-index: 10;
+    font-size: 3.5vw;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+.customShadowBottom{
+    width: 10px;
+    height: 10px;
+    box-shadow: -300px -200px 600px 300px rgba(18, 37, 49, 0.4);
+    
+}
+
+.shareTextGradient{
+    font-size: 3.5vw;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    background-image: linear-gradient(to left, #9780E5, #53CEDA);
+    background-clip: text;
+    color: transparent;
+}
+
+.shareButton {
+    z-index: 10;
+    background-color: #00B0FF;
+    color: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 23px;
+    cursor: pointer;
+}
+
+.shareButton:hover {
+    background-color: #25baff;
 }
