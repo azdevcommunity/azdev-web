@@ -1,0 +1,8 @@
+.formContainer {
+    border-radius: 13px;
+    padding: 45px 30px;
+    background-color: #141418;
+    /* box shadow with #122531 */
+    box-shadow: 0px 8px 100px rgba(18, 37, 49, 2);
+}
+
