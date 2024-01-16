@@ -5,7 +5,9 @@
     const BlogSection: React.FC = () => {
         return (
             <div className={`${style.blogSection}`} id='blog'>
+                
                 <div className={style.blogTextsContainer}>
+                <div className={style.customShadowTop}></div>
                     <span className={style.blogHeaderText}>Birlikdə qurduğumuz məqalələri kəşf edin.</span>
                     <span>Cəmiyyətimiz birgə məqalələri kəşf etmək və paylaşmaq üçün platforma təqdim edir.
                         Seniorlar hər bir məqaləyə birbaşa fikirlərini əlavə edərək, bilik mübadiləsini bir addım irəli aparırlar.</span>
@@ -18,6 +20,7 @@
                 <CategoryCard title='Cyber security' imageUrl='.../../../../../public/assets/home/cyber_sec.png' />
                 <CategoryCard title='Data Science' imageUrl='.../../../../../public/assets/home/data_scienece.png' />
                 </div>
+                <div className={style.customShadowBottom}></div>
             </div>
         );
     };
