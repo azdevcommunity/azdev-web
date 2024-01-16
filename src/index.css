@@ -13,8 +13,3 @@ html {
     box-sizing: border-box;
     font-family: 'SF Pro Display', sans-serif;
 }
-
-
-.top-shadow {
-    @apply fixed top-0 left-0 w-full z-10 shadow-custom;
-}
