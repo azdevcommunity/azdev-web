@@ -11,11 +11,7 @@ const App = () => (
     <DashBoard>
         <AppProvider>
             <Routes>
-                <Route path={"/"} element={<HomeLayout/>}>
-                    <Route index element={<HomePage/>}/>
-                </Route>
-                <Route path={"/login"} element={<LoginPage/>}/>
-                <Route path={"/register"} element={<RegisterPage/>}/>
+                <Route path={"/"} element={<HomePage/>}/>
             </Routes>
         </AppProvider>
     </DashBoard>
