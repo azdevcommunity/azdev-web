@@ -3,10 +3,12 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    width: 15vw;
+    /*width: 15vw;*/
+    width: 25vw;
     border-radius: 3vw;
     overflow: hidden;
-    background: #1B3F60;
+    /*background: #1B3F60;*/
+    background: #27313a;
     height: 14vw;
     color: #FFFFFF;
     text-align: center;
