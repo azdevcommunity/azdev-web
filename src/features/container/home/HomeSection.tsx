@@ -3,10 +3,13 @@ import style from './style/home.module.css';
 import GoogleSignInButton from './component/GoogleSignInButton/GoogleSignInButton';
 import GithubSignInButton from './component/GithubSignInButton/GithubSignInButton';
 import CustomButton from './component/CustomBlueButton/CustomBlueButton';
+import Footer from '../../components/Footer/FooterLink';
 
 const HomeSection: React.FC = () => {
     return (
-        <div className={`${style.homeSection}`} id='home'>
+        <>
+        <div className={style.landingPageContainer}>
+            <div className={`${style.homeSection}`} id='home'>
             <div className={style.homeSectionImageContainer}>
                 <img src="../../../../../public/assets/home/azdev_logo.png" className={style.homeSectionImage} />
             </div>
@@ -34,6 +37,11 @@ const HomeSection: React.FC = () => {
                 </div>
             </div>
         </div>
+        <Footer />
+        </div>
+        </>
+
+        
     );
 };
 
