@@ -2,7 +2,7 @@ import React from 'react';
 import './GoogleSignInButton.css';
 
 interface GoogleSignInButtonProps {
-  onClick: () => void; // Define other props as needed
+  onClick?: () => void; // Define other props as needed
 }
 
 const GoogleSignInButton: React.FC<GoogleSignInButtonProps> = ({ onClick }) => {
