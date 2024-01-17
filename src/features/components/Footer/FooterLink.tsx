@@ -18,13 +18,11 @@ const Footer: React.FC = () => {
         <div className="flex space-x-4">
           <FooterLink name="About" url="/about" />
           <FooterLink name="Help Center" url="/help" />
-          {/* Add more links as needed */}
         </div>
         <div className="text-gray-600">&copy; 2024 X Corp.</div>
         <div className="flex space-x-4">
           <FooterLink name="Privacy Policy" url="/privacy" />
           <FooterLink name="Terms of Service" url="/terms" />
-          {/* Add more links as needed */}
         </div>
       </div>
     </footer>
