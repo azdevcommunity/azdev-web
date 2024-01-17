@@ -46,11 +46,7 @@ const HomeSection: React.FC = () => {
                             }} value="Daxil ol" className="signInButton"/>
                         </div>
                         <SignInModal isOpen={isOpen} toggle={onClose}/>
-                        <button
-                            data-modal-target={"1"}
-                            data-modal-toggle={"1"}
-                        >dasdas
-                        </button>
+
                     </div>
 
                 </div>
