@@ -1,5 +1,5 @@
 import React from 'react';
-import './CustomBlueButton.css';
+import './CustomButton.css';
 
 interface CustomButtonProps {
     onClick?: () => void;
@@ -7,7 +7,7 @@ interface CustomButtonProps {
     value: string;
 }
 
-const CustomButton: React.FC<CustomButtonProps> = ({onClick, className = "", value,id }) => {
+const CustomButton: React.FC<CustomButtonProps> = ({onClick, className = "", value }) => {
     return (
         <button
             className={`custom-blue-button ${className}`} onClick={onClick}>

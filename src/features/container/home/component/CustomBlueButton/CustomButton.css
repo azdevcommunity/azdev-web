@@ -27,3 +27,25 @@
 .signInButton:hover {
     background-color: #031018;
 }
+
+.signInNextButton {
+    background-color: #fff;
+    color: #000;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.signInNextButton:hover{
+  background-color: #D7DBDC; 
+}
+
+.forgotPasswordButton{
+    /* letter-spacing: 0.2px; */
+    border: solid 0.4px #9e9e9e6e;
+    background-color: transparent;
+    color: #fff;
+}
+
+.forgotPasswordButton:hover{
+    background-color: #181919;
+}
