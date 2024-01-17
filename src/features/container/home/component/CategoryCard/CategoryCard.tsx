@@ -30,8 +30,8 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ title, imageUrl }) => {
       const x = event.clientX - rect.left - rect.width / 2;
       const y = event.clientY - rect.top - rect.height / 2;
       // Increase the tilt intensity here by increasing the multiplier
-      const rotateX = (y / rect.height) * 15; // Increased sensitivity
-      const rotateY = (-x / rect.width) * 15; // Increased sensitivity
+      const rotateX = (y / rect.height) * 20// Increased sensitivity
+      const rotateY = (-x / rect.width) * 20; // Increased sensitivity
       setRotateStyle({
         transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)` // Added perspective
       });
