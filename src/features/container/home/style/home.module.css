@@ -129,7 +129,7 @@
 
 /* width */
 ::-webkit-scrollbar {
-    width: 15px;
+    width: 16px;
   }
   
  
@@ -159,17 +159,5 @@
     /* add arrow up and arrow down  */
 
     ::-webkit-scrollbar-button {
-        background: black; 
+        background: #424242; 
     }
-
-    /* arrow up */
-    ::-webkit-scrollbar-button:start:decrement {
-        background: #fff; 
-    }
-
-    /* arrow down */
-
-    ::-webkit-scrollbar-button:end:increment {
-        background: #fff; 
-    }
-    
