@@ -1,13 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
 import style from './style/home.module.css';
 import GoogleSignInButton from './component/GoogleSignInButton/GoogleSignInButton';
 import GithubSignInButton from './component/GithubSignInButton/GithubSignInButton';
 import CustomButton from './component/CustomBlueButton/CustomBlueButton';
 import Footer from '../../components/Footer/FooterLink';
-import SigninPopup from "../../components/SigninPopup/PopUp.tsx";
+import SignInModal from "../../components/SignInModal/SignInModal.tsx";
+import {useDisclosure} from "@nextui-org/react";
 
 const HomeSection: React.FC = () => {
-    const [isOpen, setOpen] = useState(true);
+    const {isOpen, onOpen, onClose} = useDisclosure();
     return (
         <>
             <div className={style.landingPageContainer}>
@@ -41,10 +42,10 @@ const HomeSection: React.FC = () => {
                         <div className={style.alreadyHaveAccountContainer}>
                             Hesabınız var?
                             <CustomButton onClick={() => {
-                                setOpen(true)
+                                 onOpen()
                             }} value="Daxil ol" className="signInButton"/>
                         </div>
-                        <SigninPopup isOpen={isOpen} toggle={setOpen}/>
+                        <SignInModal isOpen={isOpen} toggle={onClose}/>
                         <button
                             data-modal-target={"1"}
                             data-modal-toggle={"1"}
