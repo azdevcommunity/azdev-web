@@ -4,7 +4,6 @@ import GoogleSignInButton from './component/GoogleSignInButton/GoogleSignInButto
 import GithubSignInButton from './component/GithubSignInButton/GithubSignInButton';
 import CustomButton from './component/CustomBlueButton/CustomButton.tsx';
 import Footer from '../../components/Footer/FooterLink';
-// import SigninPopup from "../../components/SigninPopup/PopUp.tsx";
 import SignInModal from '../../components/SignInModalGPT/SignInModal.tsx';
 import { useDisclosure } from '@nextui-org/react';
 
