@@ -39,7 +39,7 @@ const SignInForm: React.FC = () => {
     return (
         <FormContainer>
             <form onSubmit={handleSubmit}>
-                <InputGroup>
+                <InputGroup padding={"0 12px 0  0"} >
                     <span className={style.inputHeader}>Email</span>
                     <input
                         type="email"
@@ -50,7 +50,7 @@ const SignInForm: React.FC = () => {
                         className={style.inputField}
                     />
                 </InputGroup>
-                <InputGroup>
+                <InputGroup padding={"0 0 0  12px"}>
                     <span className={style.inputHeader}>Şifrə</span>
                     <input
                         type="password"
@@ -61,7 +61,7 @@ const SignInForm: React.FC = () => {
                         className={style.inputField}
                     />
                 </InputGroup>
-                <InputGroup>
+                <InputGroup >
                     <SubmitButton>Daxil ol</SubmitButton>
                 </InputGroup>
                 <div className={style.socialLogin}>
