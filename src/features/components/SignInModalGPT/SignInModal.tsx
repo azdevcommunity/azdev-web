@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
+// import React, { useState } from 'react';
 import GoogleSignInButton from '../../container/home/component/GoogleSignInButton/GoogleSignInButton';
 import GithubSignInButton from '../../container/home/component/GithubSignInButton/GithubSignInButton';
 import style from './SignInModal.module.css';
 // import GlowingInput from '../GlowingInput/GlowingInput';
-import { Input } from "@nextui-org/react";
+// import { Input } from "@nextui-org/react";
 import CustomButton from '../../container/home/component/CustomBlueButton/CustomButton';
 
 interface SignInModalProps {
@@ -14,7 +15,7 @@ interface SignInModalProps {
 
 
 const SignInModal: React.FC<SignInModalProps> = ({ isOpen, onClose }) => {
-    const [email, setEmail] = useState('');
+    // const [email, setEmail] = useState('');
 
 
 
