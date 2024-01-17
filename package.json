@@ -10,10 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@nextui-org/react": "^2.2.9",
     "@reduxjs/toolkit": "^2.0.1",
     "colorthief": "^2.4.0",
     "flowbite": "^2.2.1",
     "flowbite-react": "^0.7.2",
+    "framer-motion": "^10.18.0",
     "http-proxy-middleware": "^2.0.6",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
