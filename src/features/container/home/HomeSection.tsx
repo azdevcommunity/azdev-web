@@ -2,29 +2,29 @@ import React, { useState, useEffect } from 'react';
 import style from './style/home.module.css';
 import GoogleSignInButton from './component/GoogleSignInButton/GoogleSignInButton';
 import GithubSignInButton from './component/GithubSignInButton/GithubSignInButton';
-import CustomButton from './component/CustomBlueButton/CustomBlueButton';
+import CustomButton from './component/CustomBlueButton/CustomButton.tsx';
 import Footer from '../../components/Footer/FooterLink';
 // import SigninPopup from "../../components/SigninPopup/PopUp.tsx";
 import SignInModal from '../../components/SignInModalGPT/SignInModal.tsx';
+import { useDisclosure } from '@nextui-org/react';
 
 const HomeSection: React.FC = () => {
-    const [isOpen, setOpen] = useState(false);
     const [isScrollbarHidden, setIsScrollbarHidden] = useState(false);
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const toggleScrollbar = () => {
+        setIsScrollbarHidden(!isScrollbarHidden);
+    };
 
-  const toggleScrollbar = () => {
-    setIsScrollbarHidden(!isScrollbarHidden);
-  };
-
-  useEffect(() => {
-    if (isScrollbarHidden) {
-      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-      document.body.style.overflow = 'hidden';
-      document.body.style.paddingRight = `${scrollbarWidth}px`;
-    } else {
-      document.body.style.overflow = '';
-      document.body.style.paddingRight = '';
-    }
-  }, [isScrollbarHidden]);
+    useEffect(() => {
+        if (isScrollbarHidden) {
+            const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+            document.body.style.overflow = 'hidden';
+            document.body.style.paddingRight = `${scrollbarWidth}px`;
+        } else {
+            document.body.style.overflow = '';
+            document.body.style.paddingRight = '';
+        }
+    }, [isScrollbarHidden]);
     return (
         <>
             <div className={style.landingPageContainer}>
@@ -34,9 +34,9 @@ const HomeSection: React.FC = () => {
                     </div>
                     <div className={style.loginAndSignUpContainer}>
                         <div className={style.loginAndSignUpTextHeader}>
-                            Happening now
+                            Daha çox kəşf et
                             <div className={style.loginAndSignUpText}>
-                                Join today.
+                            İndi qoşul.
                             </div>
                         </div>
                         <GoogleSignInButton />
@@ -58,15 +58,14 @@ const HomeSection: React.FC = () => {
                         <div className={style.alreadyHaveAccountContainer}>
                             Hesabınız var?
                             <CustomButton onClick={() => {
-                                setOpen(true)
+                                onOpen()
                                 toggleScrollbar();
                             }} value="Daxil ol" className="signInButton" />
                         </div>
-                        {/* <SigninPopup isOpen={isOpen} toggle={setOpen}/> */}
-                        <SignInModal isOpen={isOpen} onClose={() =>{
-                            setOpen(false)
+                        <SignInModal isOpen={isOpen} onClose={() => {
+                            onClose()
                             isScrollbarHidden && toggleScrollbar();
-                        }}/>
+                        }} />
                     </div>
 
                 </div>

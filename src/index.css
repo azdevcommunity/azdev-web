@@ -15,3 +15,8 @@ body{
     box-sizing: border-box;
     font-family: 'SF Pro Display', sans-serif;
 }
+
+.nextui-input input:focus {
+    outline: none;
+    border-color: red; /* or set to the desired border color */
+  }

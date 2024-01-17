@@ -33,7 +33,7 @@ export default {
       'white': '#ffffff',
       'milk-white': '#E7E9EA',
       'custom-color': {
-        100: '#cffafe',
+        100: '#242D34',
         200: '#a5f3fc',
         300: '#67e8f9',
         400: '#22d3ee',
@@ -51,4 +51,3 @@ export default {
     nextui()
   ],
 }
-

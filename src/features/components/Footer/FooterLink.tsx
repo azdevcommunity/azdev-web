@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
           <FooterLink name="About" url="/about" />
           <FooterLink name="Help Center" url="/help" />
         </div>
-        <div className="text-gray-600">&copy; 2024 X Corp.</div>
+        <div className="text-gray-600">&copy; 2024 AzDev Community</div>
         <div className="flex space-x-4">
           <FooterLink name="Privacy Policy" url="/privacy" />
           <FooterLink name="Terms of Service" url="/terms" />

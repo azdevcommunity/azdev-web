@@ -54,8 +54,8 @@
 .loginAndSignUpTextHeader{
     color: #fff;
     font-size: 66px;
+    font-weight: 900;
     text-wrap: nowrap;
-    font-weight: 600;
     margin-bottom: 20px;
 }
 .loginAndSignUpText {
