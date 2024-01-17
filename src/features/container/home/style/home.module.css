@@ -20,7 +20,7 @@
     justify-content: center;
     width: 20%;
     height: 100%;
-    margin-right: 20vh;
+    margin-right: 35vh;
 }
 
 .privacyAndTermText{
@@ -54,8 +54,8 @@
 .loginAndSignUpTextHeader{
     color: #fff;
     font-size: 66px;
+    font-weight: 900;
     text-wrap: nowrap;
-    font-weight: 600;
     margin-bottom: 20px;
 }
 .loginAndSignUpText {
@@ -159,5 +159,16 @@
     /* add arrow up and arrow down  */
 
     ::-webkit-scrollbar-button {
+        background: #424242; 
+    }
+
+    /* arrow up */
+    ::-webkit-scrollbar-button:start:decrement {
+        background: #424242; 
+    }
+
+    /* arrow down */
+
+    ::-webkit-scrollbar-button:end:increment {
         background: #424242; 
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import './CustomBlueButton.css';
+import './CustomButton.css';
 
 interface CustomButtonProps {
     onClick?: () => void;
