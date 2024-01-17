@@ -41,34 +41,33 @@ const RegisterForm: React.FC = () => {
 
     return (
         <FormContainer>
-            <form onSubmit={handleSubmit}>
-                <div className={"flex"}>
-                    <InputGroup>
-                        <label htmlFor={"email"} className={style.inputHeader}>Email</label>
-                        <input
-                            id={"email"}
-                            type="email"
-                            name="email"
-                            placeholder="Email adresin"
-                            value={form.email}
-                            onChange={handleChange}
-                            className={style.inputField}
-                        />
-                    </InputGroup>
 
-                    <InputGroup>
-                        <label htmlFor={"email"} className={style.inputHeader}>Email</label>
-                        <input
-                            id={"email"}
-                            type="email"
-                            name="email"
-                            placeholder="Email adresin"
-                            value={form.email}
-                            onChange={handleChange}
-                            className={style.inputField}
-                        />
-                    </InputGroup>
-                </div>
+
+            <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+                <InputGroup>
+                    <label htmlFor={"name"} className={style.inputHeader}>Ad</label>
+                    <input
+                        id={"name"}
+                        type="name"
+                        name="name"
+                        placeholder="Email adresin"
+                        value={form.email}
+                        onChange={handleChange}
+                        className={style.inputField}
+                    />
+                </InputGroup>
+                <InputGroup>
+                    <label htmlFor={"surname"} className={style.inputHeader}>Soyad</label>
+                    <input
+                        id={"surname"}
+                        type="surname"
+                        name="surname"
+                        placeholder="Soyad"
+                        value={form.email}
+                        onChange={handleChange}
+                        className={style.inputField}
+                    />
+                </InputGroup>
                 <InputGroup>
                     <label htmlFor={"email"} className={style.inputHeader}>Email</label>
                     <input
@@ -81,30 +80,37 @@ const RegisterForm: React.FC = () => {
                         className={style.inputField}
                     />
                 </InputGroup>
-                <InputGroup>
-                    <label htmlFor={"password"} className={style.inputHeader}>Şifrə</label>
-                    <input
-                        id={"password"}
-                        type="password"
-                        name="password"
-                        placeholder="Şifrə"
-                        value={form.password}
-                        onChange={handleChange}
-                        className={style.inputField}
-                    />
-                </InputGroup>
-                <InputGroup>
-                    <label htmlFor={"passwordConfirm"} className={style.inputHeader}>Tekrar Şifrə</label>
-                    <input
-                        id={"passwordConfirm"}
-                        type="passwordConfirm"
-                        name="passwordConfirm"
-                        placeholder="Tekrar Şifrə"
-                        value={form.passwordConfirm}
-                        onChange={handleChange}
-                        className={style.inputField}
-                    />
-                </InputGroup>
+                <div className="grid md:grid-cols-2 md:gap-6">
+                    <div className="relative z-0 w-full mb-5 group">
+                        <InputGroup>
+                            <label htmlFor={"password"} className={style.inputHeader}>Şifrə</label>
+                            <input
+                                id={"password"}
+                                type="password"
+                                name="password"
+                                placeholder="Şifrə"
+                                value={form.password}
+                                onChange={handleChange}
+                                className={style.inputField}
+                            />
+                        </InputGroup>
+
+                    </div>
+                    <div className="relative z-0 w-full mb-5 group">
+                        <InputGroup>
+                            <label htmlFor={"passwordConfirm"} className={style.inputHeader}>Tekrar Şifrə</label>
+                            <input
+                                id={"passwordConfirm"}
+                                type="passwordConfirm"
+                                name="passwordConfirm"
+                                placeholder="Tekrar Şifrə"
+                                value={form.passwordConfirm}
+                                onChange={handleChange}
+                                className={style.inputField}
+                            />
+                        </InputGroup>
+                    </div>
+                </div>
                 <InputGroup>
                     <SubmitButton>Daxil ol</SubmitButton>
                 </InputGroup>
