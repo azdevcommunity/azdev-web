@@ -1,6 +1,6 @@
 import AppProvider from "./AppProvider"
 import {Route, Routes} from "react-router-dom";
-import HomePage from "../features/pages/home/HomePage.tsx";
+import SignIn from "../features/pages/home/SignIn.tsx";
 import DashBoard from "./DashBoard.tsx";
 
 const App = () => {
@@ -9,7 +9,7 @@ const App = () => {
         <DashBoard>
             <AppProvider>
                 <Routes>
-                    <Route path={"/"} element={<HomePage/>}/>
+                    <Route path={"/"} element={<SignIn/>}/>
                 </Routes>
             </AppProvider>
         </DashBoard>

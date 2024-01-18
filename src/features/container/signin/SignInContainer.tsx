@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import style from './style/home.module.css';
+import style from './style/signin.module.css';
 import GoogleSignInButton from './component/GoogleSignInButton/GoogleSignInButton';
 import GithubSignInButton from './component/GithubSignInButton/GithubSignInButton';
 import CustomButton from './component/CustomBlueButton/CustomButton.tsx';
 import Footer from '../../components/Footer/FooterLink';
-import SignInModal from '../../components/SignInModalGPT/SignInModal.tsx';
+import SignInModal from './component/SignInModal/SignInModal.tsx';
 import { useDisclosure } from '@nextui-org/react';
 
-const HomeSection: React.FC = () => {
+const SignInContainer: React.FC = () => {
     const [isScrollbarHidden, setIsScrollbarHidden] = useState(false);
     const { isOpen, onOpen, onClose } = useDisclosure();
     const toggleScrollbar = () => {
@@ -75,4 +75,4 @@ const HomeSection: React.FC = () => {
     );
 };
 
-export default HomeSection;
+export default SignInContainer;
