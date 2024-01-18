@@ -6,6 +6,7 @@ import CustomButton from './component/CustomBlueButton/CustomButton.tsx';
 import SignInModal from './component/SignInModal/SignInModal.tsx';
 import {useDisclosure} from '@nextui-org/react';
 import Footer from "./component/Footer/FooterLink.tsx";
+import {useNavigate} from "react-router-dom";
 
 const SignInContainer: React.FC = () => {
     const [isScrollbarHidden, setIsScrollbarHidden] = useState(false);
@@ -13,6 +14,7 @@ const SignInContainer: React.FC = () => {
     const toggleScrollbar = () => {
         setIsScrollbarHidden(!isScrollbarHidden);
     };
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (isScrollbarHidden) {
@@ -36,7 +38,12 @@ const SignInContainer: React.FC = () => {
         <>
             <div className={style.landingPageContainer}>
                 <div className={`${style.homeSection}`} id='home'>
-                    <div className={style.homeSectionImageContainer}>
+                    <div
+
+                        onClick={()=>{
+                            navigate("/home")
+                        }}
+                        className={style.homeSectionImageContainer}>
                         <img src="/assets/home/azdev_logo.png" className={style.homeSectionImage} alt={"azdev_logo"}/>
                     </div>
                     <div className={style.loginAndSignUpContainer}>
