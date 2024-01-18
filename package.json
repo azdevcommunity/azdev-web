@@ -10,11 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@heroicons/react": "^2.1.1",
     "@nextui-org/react": "^2.2.9",
     "@reduxjs/toolkit": "^2.0.1",
     "colorthief": "^2.4.0",
-
-
     "framer-motion": "^10.18.0",
     "http-proxy-middleware": "^2.0.6",
     "lodash": "^4.17.21",

@@ -12,14 +12,14 @@ interface Props {
 const AppProvider: FC<Props> = ({children}) => {
 
     const [, , setTheme] = useTheme();
-    useEffect(() => setTheme(), [])
+    useEffect(() => setTheme(), [setTheme])
 
     return (
         <BrowserRouter>
-            <NextUIProvider >
-            <Provider store={store}>
-                {children}
-            </Provider>
+            <NextUIProvider>
+                <Provider store={store}>
+                    {children}
+                </Provider>
             </NextUIProvider>
         </BrowserRouter>
     )

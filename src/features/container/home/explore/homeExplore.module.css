@@ -1,0 +1,29 @@
+.exploreContainer{
+
+    border: 1px solid rgb(47, 51, 54);
+}
+.exploreSwitch{
+    position: sticky;
+    top: 0;
+    background-color:transparent;
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(47, 51, 54);
+}
+.exploreTabL,.exploreTabR{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    width: 50%;
+}
+.exploreTabL:hover,
+.exploreTabR:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}

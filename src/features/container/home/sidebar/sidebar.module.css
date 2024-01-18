@@ -1,0 +1,30 @@
+.sidebarLink{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding:10px 7px;
+    list-style: none;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 18px;
+    width: max-content;
+    margin-bottom: 12px;
+}
+
+.sidebarLink:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+
+.sidebarContainer{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding-right: 30px;
+}
+
+.sidebar{
+    max-width: 275px;
+    position: fixed;
+}
