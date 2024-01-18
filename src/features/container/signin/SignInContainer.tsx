@@ -3,9 +3,10 @@ import style from './style/signin.module.css';
 import GoogleSignInButton from './component/GoogleSignInButton/GoogleSignInButton';
 import GithubSignInButton from './component/GithubSignInButton/GithubSignInButton';
 import CustomButton from './component/CustomBlueButton/CustomButton.tsx';
-import Footer from '../../components/Footer/FooterLink';
+
 import SignInModal from './component/SignInModal/SignInModal.tsx';
 import { useDisclosure } from '@nextui-org/react';
+import Footer from "./component/Footer/FooterLink.tsx";
 
 const SignInContainer: React.FC = () => {
     const [isScrollbarHidden, setIsScrollbarHidden] = useState(false);
