@@ -1,0 +1,28 @@
+.github-sign-in-button {
+    background-color: #fff;
+    color: #484d50;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 26px;
+    padding-right: 29px;
+    border-radius: 20px;
+    font-family: 'Alliance No.1', sans-serif;
+
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .github-sign-in-button:hover {
+   background-color: #E6E6E6; 
+  }
+  
+  .github-logo {
+    margin-right: 10px;
+    width: 18px; /* Adjust size as needed */
+    height: auto;
+  }
+  
