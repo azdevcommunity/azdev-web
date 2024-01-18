@@ -1,0 +1,7 @@
+.homeLayout {
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 40% 35%;
+    position: relative;
+}

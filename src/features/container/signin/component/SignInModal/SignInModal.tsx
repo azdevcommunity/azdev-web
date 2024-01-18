@@ -1,11 +1,11 @@
 import React from 'react';
 // import React, { useState } from 'react';
-import GoogleSignInButton from '../../container/home/component/GoogleSignInButton/GoogleSignInButton';
-import GithubSignInButton from '../../container/home/component/GithubSignInButton/GithubSignInButton';
+import GoogleSignInButton from '../GoogleSignInButton/GoogleSignInButton.tsx';
+import GithubSignInButton from '../GithubSignInButton/GithubSignInButton.tsx';
 import style from './SignInModal.module.css';
 // import GlowingInput from '../GlowingInput/GlowingInput';
 // import { Input } from "@nextui-org/react";
-import CustomButton from '../../container/home/component/CustomBlueButton/CustomButton';
+import CustomButton from '../CustomBlueButton/CustomButton.tsx';
 
 interface SignInModalProps {
     isOpen: boolean;

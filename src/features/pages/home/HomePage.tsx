@@ -1,15 +1,11 @@
-import HomeSection from '../../container/home/HomeSection';
-import style from '../../container/home/style/home.module.css'
+import HomeExplore from "../../container/home/explore/HomeExplore.tsx";
+
 
 const HomePage = () => {
-
     return (
         <>
-            <div className={style.landingPageContainer}>
-                <HomeSection />
-            </div>
+            <HomeExplore/>
         </>
-
     );
 };
 
