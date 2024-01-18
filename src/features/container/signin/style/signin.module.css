@@ -1,0 +1,174 @@
+.landingPageContainer{
+    height: 100vh;
+
+}
+/* HOME SECTION */
+
+.homeSection {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.loginAndSignUpContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+    margin-right: 35vh;
+}
+
+.privacyAndTermText{
+    color: #71767B;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.signInButton {
+    color: #feee7d;
+}
+
+.alreadyHaveAccountContainer {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+
+.alreadyHaveAccountContainer > *:last-child {
+    margin-top: 10px;
+}
+
+.loginAndSignUpTextHeader{
+    color: #fff;
+    font-size: 66px;
+    font-weight: 900;
+    text-wrap: nowrap;
+    margin-bottom: 20px;
+}
+.loginAndSignUpText {
+    color: #fff;
+    font-size: 26px;
+    text-wrap: nowrap;
+    font-weight: 600;
+}
+
+.homeSectionImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.homeSectionImageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+}
+
+/* responsive syles */
+
+@media screen and (max-width: 768px) {
+    .homeSection {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .homeSectionImageContainer {
+        justify-content: flex-start;
+        padding-top: 30px;
+        padding-left: 30px;
+        width: 100%;
+    }
+
+    .homeSectionImage {
+        width: 30%;
+        object-fit: cover;
+    }
+
+    .loginAndSignUpContainer {
+        width: 80%;
+        margin-right: 0;
+    }
+
+    .loginAndSignUpTextHeader {
+        font-size: 40px;
+    }
+
+    .loginAndSignUpText {
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
+    .alreadyHaveAccountContainer {
+        font-size: 16px;
+    }
+
+    .alreadyHaveAccountContainer > *:last-child {
+        margin-top: 5px;
+    }
+
+    .privacyAndTermText {
+        font-size: 10px;
+    }
+    
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 16px;
+  }
+  
+ 
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #686868; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #7b7b7b; 
+  }
+
+  /* on click */
+    ::-webkit-scrollbar-thumb:active {
+        background: #a1a1a1; 
+    }
+
+
+    /* change background of scrollbar */
+
+    ::-webkit-scrollbar-track {
+        background: #424242; 
+    }
+
+    /* add arrow up and arrow down  */
+
+    ::-webkit-scrollbar-button {
+        background: #424242; 
+    }
+
+    /* arrow up */
+    ::-webkit-scrollbar-button:start:decrement {
+        background: #424242; 
+    }
+
+    /* arrow down */
+
+    ::-webkit-scrollbar-button:end:increment {
+        background: #424242; 
+    }
