@@ -1,0 +1,44 @@
+.trendsAndSearchContainer{
+    max-width: 70%;
+    margin-left: 25px;
+}
+.trendsContainer {
+
+    border-radius: 25px;
+    height: max-content;
+    position: sticky;
+    top: 70px;
+    overflow: hidden;
+}
+
+.trendItem {
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.trendItem:hover {
+    background-color: #1D1F23;
+}
+.trendItem >div:first-child{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.trendItem > div > span:first-child {
+    color: #5F6368;
+}
+
+
+.trendItemMore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    border-radius: 100%;
+}
