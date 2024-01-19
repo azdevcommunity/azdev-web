@@ -1,19 +1,21 @@
-.exploreContainer{
-
+.exploreContainer {
+    height: 250vh;
     border: 1px solid rgb(47, 51, 54);
     border-top: none;
 }
-.exploreSwitch{
+
+.exploreSwitch {
     position: sticky;
     top: 0;
-    background-color:transparent;
+    background-color: transparent;
     backdrop-filter: blur(6px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid rgb(47, 51, 54);
 }
-.exploreTabL,.exploreTabR{
+
+.exploreTabL, .exploreTabR {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,7 +26,8 @@
     cursor: pointer;
     width: 50%;
 }
+
 .exploreTabL:hover,
-.exploreTabR:hover{
+.exploreTabR:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }

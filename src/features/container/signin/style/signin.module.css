@@ -54,7 +54,7 @@
 .loginAndSignUpTextHeader{
     color: #fff;
     font-size: 66px;
-    font-weight: 900;
+    font-weight: 800;
     text-wrap: nowrap;
     margin-bottom: 20px;
 }
@@ -88,14 +88,13 @@
     }
 
     .homeSectionImageContainer {
-        justify-content: flex-start;
-        padding-top: 30px;
-        padding-left: 30px;
+        justify-content: center;
+        padding-top: 20px;
         width: 100%;
     }
 
     .homeSectionImage {
-        width: 30%;
+        width: 25%;
         object-fit: cover;
     }
 

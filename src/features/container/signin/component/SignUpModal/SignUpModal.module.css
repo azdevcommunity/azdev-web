@@ -1,6 +1,7 @@
 .inputGroup {
     position: relative;
     margin-bottom: 20px;
+    padding-top: 20px;
 }
 
 .input {
@@ -34,10 +35,8 @@
 .input:focus,
 input:valid {
     outline: none;
- 
-    /*border: 1.5px solid #1a73e8;*/
-   }
-    
+    border: 1.5px solid #1a73e8;
+}
 
 
 .input:focus~.userLabel,
@@ -92,22 +91,25 @@ input:valid {
     margin-bottom: 6px;
 }
 
-.modalLogo{
-    width: 25%;
-    margin: 0 auto; /* This will center the logo */
+.stepInfo{
+    width: max-content;
+    margin-right: auto;
+    margin-left: 20px;
+    font-weight: 700;
+    font-size: 1.3rem;
     display: block; 
 }
 
 .modelHeaderComponents{
     position: absolute;
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
-    right: 0; /* Align to the right */
-    z-index: 10; /* Ensure it's above other content */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10; 
     display: flex;
     align-items: center;
-    justify-content: space-between; /* This will position the X to the left and logo to the right */
-    padding: 1rem; /* Add some padding */
+    justify-content: space-between; 
+    padding: 1rem; 
 }
 
 .signInComponents {
@@ -117,32 +119,68 @@ input:valid {
 .closeButton {
     background: none;
     border: none;
-    color: inherit; /* Inherit the text color from the parent */
-    font-size: 1.5rem; /* Adjust the size as needed */
+    color: inherit;
+    font-size: 1.5rem; 
     cursor: pointer;
 }
 
 
 .modalContent {
     padding-top: 50px;
-    overflow-y: auto; /* Allows the content to scroll */
-    max-height: calc(100vh - 50px); /* Adjust max-height to the viewport height minus the header height */
+    overflow-y: auto; 
+    max-height: calc(100vh - 50px);
     position: relative;
 }
+.charCounter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 13px;
+    padding: 10px;
+    color: #71767B;
+    font-size: 0.8rem;
+    pointer-events: none; /* makes the counter click-through */
+}
 
+.errorMessage {
+    display: none;
+    color: #ff0000;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    margin-bottom: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: left;
+}
 
+.dateOfBirthTextSpanFirst{
+    font-size: 16px;
+    font-weight: 700;
+}
 
+.dateOfBirthTextSpanSecond {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.nameInput {
+    margin-bottom: 0px !important;
+}
+
+.dateOfBirthInput {
+    margin-top: 10px !important;
+}
+
+.dateOfBirthContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 50px;
+}
 
 @media (max-width: 768px) {
     .input {
-
         margin-bottom: 15px;
-        /* Adjusted margin for tighter spacing */
-    }
-
-    .inputGroup {
-        width: 100%;
-        /* Adjusted margin for tighter spacing */
     }
 
     .modalContent {
@@ -157,7 +195,7 @@ input:valid {
         align-items: center;
     }
 
-    .modelHeaderComponents{
+    .inputGroup, .modelHeaderComponents{
         width: 100%;
     }
 
@@ -175,27 +213,19 @@ input:valid {
 
     .input {
         padding: 10px;
-        /* Reduced padding */
         font-size: 0.9rem;
-        /* Smaller font size if necessary */
-        /* You might need to adjust the border-radius as well */
         border-radius: 0.4rem;
     }
 
     .userLabel {
         left: 10px;
-        /* Adjust according to the new padding */
         transform: translateY(0.9rem);
-        /* Smaller translateY value for smaller padding */
         font-size: 0.8rem;
-        /* Smaller font size if necessary */
     }
 
     .input:focus~.userLabel,
     .input:valid~.userLabel {
         transform: translateY(-0.5rem) scale(0.85);
-        /* Adjust the transform to move label appropriately */
     }
 
-    /* Adjust the padding and other properties for buttons and other elements if necessary */
 }
