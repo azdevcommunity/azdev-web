@@ -58,7 +58,7 @@ const SignInContainer: React.FC = () => {
                         <CustomButton value="Hesab yarat"/>
                         <div className={style.privacyAndTermText}>
                             Qeydiyyatdan keçməklə siz <a href="#terms-of-service"
-                                                         className="hover:underline text-blue-500">Kuki
+                                                         className="hover:underline text-blue-500 bg-gray">Kuki
                             istifadəsi</a> də daxil olmaqla <a href="#privacy-policy"
                                                                className="hover:underline text-blue-500">Xidmət
                             Şərtləri </a> və <a href="#cookie-use" className="hover:underline text-blue-500">Məxfilik

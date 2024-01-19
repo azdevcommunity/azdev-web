@@ -12,7 +12,7 @@ export default {
   theme: {
     extend: {
       boxShadow: {
-        outline: '0 0 0 2px rgba(59, 130, 246, 0.5)', // Adjust the RGBA value to match your glow color
+        outline: '0 0 0 2px rgba(59, 130, 246, 0.5)',
       },
       transitionProperty: {
         'height': 'height',
@@ -41,6 +41,17 @@ export default {
         700: '#0e7490',
         800: '#155e75',
         900: '#000',
+      },
+      "blue": {
+        100: '#e6f4ff',
+        200: '#b3d8ff',
+        300: '#80bdff',
+        400: '#4da1ff',
+        500: '#1D9BF0',
+        600: '#0066e6',
+        700: '#0047b4',
+        800: '#002d80',
+        900: '#00194d',
       },
     }
   },
