@@ -1,6 +1,7 @@
 .exploreContainer{
 
     border: 1px solid rgb(47, 51, 54);
+    border-top: none;
 }
 .exploreSwitch{
     position: sticky;
@@ -17,7 +18,7 @@
     justify-content: center;
     align-items: center;
     padding: 10px 20px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
