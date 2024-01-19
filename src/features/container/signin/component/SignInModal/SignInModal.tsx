@@ -16,7 +16,7 @@ const SignInModal: React.FC<SignInModalProps> = ({ isOpen, onClose }) => {
 
     const [currentView, setCurrentView] = useState('signIn');
     const [userInput, setUserInput] = useState('');
-    const [passwordInput, setPasswordInput] = useState('');
+    // const [passwordInput, setPasswordInput] = useState('');
 
     const navigate = useNavigate();
 
