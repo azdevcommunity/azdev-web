@@ -1,31 +1,35 @@
 import React, { useState } from 'react';
-import GoogleSignInButton from '../GoogleSignInButton/GoogleSignInButton.tsx';
-import GithubSignInButton from '../GithubSignInButton/GithubSignInButton.tsx';
-import style from './SignInModal.module.css';
+import style from './SignUpModal.module.css';
 import CustomButton from '../CustomBlueButton/CustomButton.tsx';
 import { useNavigate } from 'react-router-dom';
+import Dropdown from '../../DropDown/DropDown.tsx';
 
-interface SignInModalProps {
+interface SignUpModalProps {
     isOpen: boolean;
     onClose: () => void;
 }
 
 
 
-const SignInModal: React.FC<SignInModalProps> = ({ isOpen, onClose }) => {
+const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
 
-    const [currentView, setCurrentView] = useState('signIn');
+    const [currentView, setCurrentView] = useState('signUp');
     const [userInput, setUserInput] = useState('');
-    // const [passwordInput, setPasswordInput] = useState('');
+
+    const onUserInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        if (name === 'dateOfBirth') {
+        } else {
+            setUserInput(value);
+        }
+    }
+
 
     const navigate = useNavigate();
 
-    const onUserInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setUserInput(e.target.value);
-    }
 
     const onCloseAndReset = () => {
-        setCurrentView('signIn');
+        setCurrentView('signUp');
         onClose();
     }
 
@@ -36,35 +40,46 @@ const SignInModal: React.FC<SignInModalProps> = ({ isOpen, onClose }) => {
     }
 
     const renderForm = () => {
-        if (currentView === 'signIn') {
+        if (currentView === 'signUp') {
             return (
                 <>
-                    <div className={`${style.signInComponents} bg-custom-color-900 text-white rounded-[15px] max-w-lg w-full relative pl-24 pr-24 pt-10 pb-10`}>
+                    <div className={`${style.signUpComponents} bg-custom-color-900 text-white rounded-[15px] max-w-lg w-full relative pl-14 pr-14 pt-10 pb-16`}>
                         <div className={`${style.modelHeaderComponents}`}>
                             <button onClick={onCloseAndReset} className="text-3xl leading-none hover:text-gray-300">&times;</button>
-                            <img src="/assets/home/azdev_logo.png" className={`${style.modalLogo}`} alt={"azdev_logo"} />
+                            <span className={`${style.stepInfo}`} >Addım 1/5</span>
                         </div>
                         <div className={style.modalContent}>
-                            <h2 className="text-3xl font-bold mb-8 text-milk-white">Daxil ol</h2>
-                            <GoogleSignInButton />
-                            <GithubSignInButton className="mt-5" />
-                            <div className="flex items-center justify-center my-8">
-                                <div className="flex-grow border-t border-gray-500"></div>
-                                <span className="mx-2 text-sm text-gray-300">və ya</span>
-                                <div className="flex-grow border-t border-gray-500"></div>
+                            <h2 className="text-3xl font-bold mb-8 text-milk-white">Hesabını yarat</h2>
+
+                            <div className={`${style.inputGroup} ${style.nameInput}`} >
+                                <input required type="text" name="text" className={style.input} onChange={onUserInputChange} maxLength={50} />
+                                <label className={style.userLabel}>Name</label>
+                                <span className={style.charCounter}> {userInput.length} / 50</span>
+                                <span className={style.errorMessage}>What's your name?</span>
                             </div>
-                            {/* <GlowingInput /> */}
 
                             <div className={style.inputGroup}>
-                                <input required type="text" name="text" className={style.input} onChange={onUserInputChange} />
-                                <label className={style.userLabel}>Telefon, email və ya istifadəçi adı</label>
+                                <input required type="mail" name="text" className={style.input} onChange={onUserInputChange} />
+                                <label className={style.userLabel}>Email</label>
                             </div>
 
-                            <CustomButton className="signInNextButton" value="Növbəti" onClick={onNextClick} />
-                            <CustomButton className="forgotPasswordButton" value="Şifrəni unutdun?" />
-                            <p className="bg-sky-600 mt-14">
-                                Hesabın yoxdur? <a href="#" className="text-blue-500 hover:underline">Qeydiyyatdan keç</a>
-                            </p>
+                            {/* Date of Birth */}
+
+                            <div className={style.dateOfBirthTextSpanFirst}>
+                                Doğum tarixi
+                            </div>
+                            <span className={style.dateOfBirthTextSpanSecond}>Bu ictimaiyyətə göstərilməyəcək. Bu hesab biznes, ev heyvanı və ya başqa bir şey üçün olsa belə, öz yaşınızı təsdiqləyin.</span>
+
+                            <div className={style.dateOfBirthContainer}>
+                                <Dropdown />
+                                <Dropdown />
+                                <Dropdown />
+                            </div>
+
+
+
+                            <CustomButton className="signUpNextButton" value="Növbəti" onClick={onNextClick} />
+
                         </div>
                     </div>
                 </>
@@ -72,10 +87,10 @@ const SignInModal: React.FC<SignInModalProps> = ({ isOpen, onClose }) => {
         } else if (currentView === 'password') {
             return (
                 <>
-                    <div className={`${style.signInComponents} bg-custom-color-900 text-white rounded-[15px] max-w-lg w-full relative pl-16 pr-16 pt-10 pb-16`}>
+                    <div className={`${style.signUpComponents} bg-custom-color-900 text-white rounded-[15px] max-w-lg w-full relative pl-16 pr-16 pt-10 pb-16`}>
                         <div className={`${style.modelHeaderComponents}`}>
                             <button onClick={onCloseAndReset} className={`${style.closeButton} text-3xl leading-none hover:text-gray-300`}>&times;</button>
-                            <img src="/assets/home/azdev_logo.png" className={`${style.modalLogo}`} alt={"azdev_logo"} />
+                            <span className={`${style.stepInfo}`} >Step 1 of 5</span>
                         </div>
                         <h2 className="text-3xl font-bold mb-8 text-milk-white pt-10">Şifrəni daxil et</h2>
                         <div className={`${style.inputGroup} w-96`}>
@@ -92,7 +107,7 @@ const SignInModal: React.FC<SignInModalProps> = ({ isOpen, onClose }) => {
                             <a href="#" className={`text-blue-500 hover:underline`}>Şifrəni unutdun?</a>
                         </div>
 
-                        <CustomButton className="signInPasswordStButton" value="Daxil ol" onClick={() => navigate("/home")} />
+                        <CustomButton className="signUpPasswordStButton" value="Daxil ol" onClick={() => navigate("/home")} />
                         {/* <CustomButton className="forgotPasswordButton" value="Şifrəni unutdun?" /> */}
                     </div>
                 </>
@@ -111,5 +126,4 @@ const SignInModal: React.FC<SignInModalProps> = ({ isOpen, onClose }) => {
     );
 };
 
-export default SignInModal;
-
+export default SignUpModal;
