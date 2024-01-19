@@ -30,7 +30,7 @@ const SignInContainer: React.FC = () => {
         onOpen()
         toggleScrollbar();
     }
-    const onSignInModalClose =()=>{
+    const onSignInModalClose = () => {
         onClose()
         isScrollbarHidden && toggleScrollbar();
     }
@@ -38,12 +38,7 @@ const SignInContainer: React.FC = () => {
         <>
             <div className={style.landingPageContainer}>
                 <div className={`${style.homeSection}`} id='home'>
-                    <div
-
-                        onClick={()=>{
-                            navigate("/home")
-                        }}
-                        className={style.homeSectionImageContainer}>
+                    <div onClick={() => navigate("/home")} className={style.homeSectionImageContainer}>
                         <img src="/assets/home/azdev_logo.png" className={style.homeSectionImage} alt={"azdev_logo"}/>
                     </div>
                     <div className={style.loginAndSignUpContainer}>
@@ -76,7 +71,7 @@ const SignInContainer: React.FC = () => {
                         <SignInModal isOpen={isOpen} onClose={onSignInModalClose}/>
                     </div>
                 </div>
-               <Footer/>
+                <Footer/>
             </div>
         </>
     );
