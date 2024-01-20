@@ -1,0 +1,23 @@
+.daySelectBox {
+    color: #71767B;
+    transform: translateY(-10%);
+    font-size: small;
+}
+
+.mainContainer{
+    margin-right: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    .dayButton {
+        width:90%;
+    }
+    .dayText{
+        font-size: 0.9rem;
+        width: 4vh !important;
+    }
+
+    .dayList {
+        width: 90px;
+    }
+}

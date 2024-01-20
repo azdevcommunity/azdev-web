@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import {nextui} from "@nextui-org/react";
+import { nextui } from "@nextui-org/react";
 
 export default {
   darkMode: "class",
@@ -41,6 +41,9 @@ export default {
         700: '#0e7490',
         800: '#155e75',
         900: '#000',
+      },
+      "border-color": {
+        100: "#71767B"
       },
       "blue": {
         100: '#e6f4ff',

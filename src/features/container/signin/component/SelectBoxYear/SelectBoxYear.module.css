@@ -1,0 +1,11 @@
+.yearSelectBox {
+    color: #71767B;
+    transform: translateY(-10%);
+    font-size: small;
+}
+
+@media screen and (max-width: 768px) {
+    .yearButton {
+        width:100%;
+    }
+}
