@@ -1,16 +1,20 @@
-import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button} from "@nextui-org/react";
+import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem} from "@nextui-org/react";
 
 import style from '../trendsandsearch.module.css';
-import MoreIcon from "./MoreIcon.tsx";
-
+// import MoreIcon from "../../../../components/icons/MoreIcon.tsx";
+import MoreButton from "../../../../components/morebutton/MoreButton.tsx";
 const TrendItemMore = () => {
     return (
         <div className={style.trendItemMore}>
             <Dropdown placement="bottom-end">
                 <DropdownTrigger>
-                    <Button variant="light" className={" rounded-full"} aria-label="more" isIconOnly>
-                        <MoreIcon/>
-                    </Button>
+                    <button aria-label="more" >
+                        <MoreButton className={"p-2 hover:text-white hover:bg-white hover:bg-opacity-20 "}/>
+
+                    </button>
+                    {/*<Button variant="light" className={" rounded-full"} aria-label="more" isIconOnly>*/}
+                    {/*    <MoreIcon/>*/}
+                    {/*</Button>*/}
                 </DropdownTrigger>
                 <DropdownMenu variant="flat" aria-label="Dropdown menu with shortcut">
                     <DropdownItem key="new" shortcut="⌘N">New file</DropdownItem>
