@@ -1,5 +1,6 @@
-import TrendItem from "./component/TrendItem.tsx";
-import style from './trendsandsearch.module.css'
+
+import style from './../trendsandsearch.module.css'
+import TrendItem from "./TrendItem.tsx";
 
 const trends = [
     {hashtag: '#cop29', posts: '7,412 posts', id: "dasda"},

@@ -5,20 +5,17 @@ const SearchBar = () => {
     const [search, setSearch] = useState("");
     return (
         <div
-            className="sticky mt-2 top-0  w-full overflow-hidden  rounded-2xl mb-3 flex justify-center items-center  text-white shadow-lg">
-
+            className="sticky mt-2 top-2  w-full overflow-hidden  rounded-2xl mb-3 flex justify-center items-center  text-white shadow-lg">
             <Input
                 size={"sm"}
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 isClearable
-                placeholder="Enter your email"
+                placeholder="Search"
                 defaultValue="junior@nextui.org"
                 onClear={() => setSearch("")}
                 className="w-full  rounded-2xl "
-                startContent={
-                    <SearchIcon/>
-                }
+                startContent={<SearchIcon/>}
             />
         </div>
     );
@@ -33,5 +30,4 @@ const SearchIcon = () => (
         <path strokeLinecap="round" strokeLinejoin="round"
               d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/>
     </svg>
-
 );

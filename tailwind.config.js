@@ -49,7 +49,8 @@ export default {
             emerald: colors.emerald,
             indigo: colors.indigo,
             yellow: colors.yellow,
-            violet: colors.violet
+            violet: colors.violet,
+            blue:colors.blue
         }
     },
     plugins: [
