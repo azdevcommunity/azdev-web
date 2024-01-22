@@ -1,0 +1,22 @@
+.backButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.subscribeButton {
+    border-radius: 25px;
+    padding: 6px 12px;
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+    transition:     all 0.2s ease-in-out;
+}
+.subscribeButton:hover  {
+    opacity: 0.85;
+}
