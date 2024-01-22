@@ -1,6 +1,6 @@
-import {BellIcon, HomeIcon, InboxIcon, TrashIcon} from "@heroicons/react/24/outline";
 import SideBarLink from "./component/SideBarLink.tsx";
 import style from './sidebar.module.css'
+import {BellIcon, HomeIcon, InboxIcon, TrashIcon} from "@heroicons/react/24/outline";
 const Sidebar = () => {
     return (
 

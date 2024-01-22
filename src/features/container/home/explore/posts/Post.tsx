@@ -1,7 +1,8 @@
-import {HeartIcon, ShareIcon, ChatBubbleOvalLeftEllipsisIcon, ArrowPathIcon} from "@heroicons/react/24/outline";
+
 import {Avatar, Button, Image} from "@nextui-org/react";
 import style from './post.module.css'
 import PostMore from "./PostMore.tsx";
+import {ArrowPathIcon, ChatBubbleOvalLeftEllipsisIcon, HeartIcon, ShareIcon} from "@heroicons/react/24/outline";
 
 const Post = ({isImage}: any) => {
     return (
