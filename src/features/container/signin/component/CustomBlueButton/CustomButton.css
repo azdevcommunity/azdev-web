@@ -61,3 +61,15 @@
 .forgotPasswordButton:hover {
     background-color: #181919;
 }
+
+
+.signUpNextButton {
+    background-color: #fff;
+    color: #000;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.signUpNextButton:hover {
+    background-color: #D7DBDC;
+}
