@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
-import { ChevronDownIcon } from '@heroicons/react/solid';
 import style from './SelectBoxYear.module.css';
 
 const Dropdown: React.FC = () => {
@@ -52,7 +51,9 @@ const Dropdown: React.FC = () => {
         <span className={style.yearSelectBox}>İl</span>
         <div className="flex items-start justify-between flex-row">
           {selectedYear()}
-          <ChevronDownIcon className={`w-5 h-5 ${isOpen && 'transform rotate-180'} transition-transform`} />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className={`w-5 h-5 ${isOpen && 'transform rotate-180'} transition-transform`}> 
+            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+          </svg>
         </div>
       </button>
       {isOpen && (

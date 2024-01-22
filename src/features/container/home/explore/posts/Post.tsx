@@ -1,4 +1,5 @@
-import {HeartIcon, ShareIcon, ChatBubbleOvalLeftEllipsisIcon, ArrowPathIcon} from "@heroicons/react/24/outline";
+import {HeartIcon, ShareIcon} from "@heroicons/react/outline/";
+import {RefreshIcon, ArrowUpIcon} from "@heroicons/react/solid";
 import {Avatar, Button, Image} from "@nextui-org/react";
 import style from './post.module.css'
 import PostMore from "./PostMore.tsx";
