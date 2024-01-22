@@ -5,15 +5,11 @@
 }
 
 .exploreSwitch {
-    position: sticky;
-    top: 0;
-    background-color: transparent;
-    backdrop-filter: blur(15px);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgb(47, 51, 54);
-    z-index: 1111;
+
 }
 
 .exploreTabL, .exploreTabR {

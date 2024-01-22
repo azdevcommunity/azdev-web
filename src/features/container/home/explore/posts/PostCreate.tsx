@@ -4,7 +4,7 @@ import MoreIcon from "../../../../components/icons/MoreIcon.tsx";
 import SettingsIcon from "../../../../components/icons/SettingsIcon.tsx";
 import SmileIcon from "../../../../components/icons/SmileIcon.tsx";
 import GifIcon from "../../../../components/icons/GifIcon.tsx";
-import style from  './post.module.css'
+import style from './post.module.css'
 
 const PostCreate = () => {
     const [postContent, setPostContent] = useState('');

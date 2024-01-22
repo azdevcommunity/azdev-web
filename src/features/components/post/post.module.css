@@ -1,0 +1,12 @@
+.postCreate{
+    border-bottom: 2px solid rgb(47, 51, 54);
+    border-radius: 0;
+    padding: 1rem ;
+
+}
+
+.postSocial{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

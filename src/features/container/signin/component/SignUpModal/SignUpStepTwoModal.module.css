@@ -1,0 +1,27 @@
+.termsAndConditionHeaderTitle{
+    font-size: 20px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.termsAndConditionHeaderCheckbox {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    justify-content: space-between;
+}
+
+.termsAndConditionHeaderCheckboxText {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.termsAndConditionBodyText {
+    color: #71767B;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
