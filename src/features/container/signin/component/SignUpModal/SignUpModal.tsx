@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import style from './SignUpModal.module.css';
+import styleSignUp from './SignUpModal.module.css';
 import CustomButton from '../CustomBlueButton/CustomButton.tsx';
 import { useNavigate } from 'react-router-dom';
-import Dropdown from '../../DropDown/DropDown.tsx';
+import SelectBoxMonth from '../SelectBoxMonth/SelectBoxMonth.tsx';
+import SelectBoxDay from '../SelectBoxDay/SelectBoxDay.tsx';
+import SelectBoxYear from '../SelectBoxYear/SelectBoxYear.tsx';
 
 interface SignUpModalProps {
     isOpen: boolean;
     onClose: () => void;
 }
-
-
 
 const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
 
@@ -24,16 +25,12 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
         }
     }
 
-
     const navigate = useNavigate();
-
 
     const onCloseAndReset = () => {
         setCurrentView('signUp');
         onClose();
     }
-
-
 
     const onNextClick = () => {
         setCurrentView('password');
@@ -43,43 +40,39 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
         if (currentView === 'signUp') {
             return (
                 <>
-                    <div className={`${style.signUpComponents} bg-custom-color-900 text-white rounded-[15px] max-w-lg w-full relative pl-14 pr-14 pt-10 pb-16`}>
-                        <div className={`${style.modelHeaderComponents}`}>
+                    <div className={`${styleSignUp.signUpComponents} bg-custom-color-900  text-white rounded-[15px] max-w-lg w-full relative pl-14 pr-14 pt-10 pb-16`}>
+                        <div className={`${styleSignUp.modelHeaderComponents}`}>
                             <button onClick={onCloseAndReset} className="text-3xl leading-none hover:text-gray-300">&times;</button>
-                            <span className={`${style.stepInfo}`} >Addım 1/5</span>
+                            <span className={`${styleSignUp.stepInfo}`} >Addım 1/5</span>
                         </div>
-                        <div className={style.modalContent}>
-                            <h2 className="text-3xl font-bold mb-8 text-milk-white">Hesabını yarat</h2>
+                        <div className={styleSignUp.modalContent}>
+                            <h2 className="text-3xl font-bold mb-1   text-milk-white">Hesabını yarat</h2>
 
-                            <div className={`${style.inputGroup} ${style.nameInput}`} >
-                                <input required type="text" name="text" className={style.input} onChange={onUserInputChange} maxLength={50} />
-                                <label className={style.userLabel}>Name</label>
-                                <span className={style.charCounter}> {userInput.length} / 50</span>
-                                <span className={style.errorMessage}>What's your name?</span>
+                            <div className={`${styleSignUp.inputGroup} ${styleSignUp.nameInput}`} >
+                                <input required type="text" name="text" className={styleSignUp.input} onChange={onUserInputChange} maxLength={50} />
+                                <label className={styleSignUp.userLabel}>Name</label>
+                                <span className={styleSignUp.charCounter}> {userInput.length} / 50</span>
+                                <span className={styleSignUp.errorMessage}>What's your name?</span>
                             </div>
 
-                            <div className={style.inputGroup}>
-                                <input required type="mail" name="text" className={style.input} onChange={onUserInputChange} />
-                                <label className={style.userLabel}>Email</label>
+                            <div className={`${styleSignUp.inputGroup} emailInput`}>
+                                <input required type="mail" name="text" className={styleSignUp.input} onChange={onUserInputChange} />
+                                <label className={styleSignUp.userLabel}>Email</label>
                             </div>
 
-                            {/* Date of Birth */}
-
-                            <div className={style.dateOfBirthTextSpanFirst}>
+                            <div className={styleSignUp.dateOfBirthTextSpanFirst}>
                                 Doğum tarixi
                             </div>
-                            <span className={style.dateOfBirthTextSpanSecond}>Bu ictimaiyyətə göstərilməyəcək. Bu hesab biznes, ev heyvanı və ya başqa bir şey üçün olsa belə, öz yaşınızı təsdiqləyin.</span>
+                            
+                            <span className={styleSignUp.dateOfBirthTextSpanSecond}>Bu ictimaiyyətə göstərilməyəcək. Bu hesab biznes, ev heyvanı və ya başqa bir şey üçün olsa belə, öz yaşınızı təsdiqləyin.</span>
 
-                            <div className={style.dateOfBirthContainer}>
-                                <Dropdown />
-                                <Dropdown />
-                                <Dropdown />
+                            <div className={styleSignUp.dateOfBirthContainer}>
+                                <SelectBoxMonth />
+                                <SelectBoxDay />
+                                <SelectBoxYear />
+
                             </div>
-
-
-
                             <CustomButton className="signUpNextButton" value="Növbəti" onClick={onNextClick} />
-
                         </div>
                     </div>
                 </>
@@ -87,7 +80,7 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
         } else if (currentView === 'password') {
             return (
                 <>
-                    <div className={`${style.signUpComponents} bg-custom-color-900 text-white rounded-[15px] max-w-lg w-full relative pl-16 pr-16 pt-10 pb-16`}>
+                    <div className={`${style.signUpComponents} bg-custom-color-900 text-white rounded-[15px]  max-w-lg w-full relative pl-16 pr-16 pt-10 pb-16`}>
                         <div className={`${style.modelHeaderComponents}`}>
                             <button onClick={onCloseAndReset} className={`${style.closeButton} text-3xl leading-none hover:text-gray-300`}>&times;</button>
                             <span className={`${style.stepInfo}`} >Step 1 of 5</span>
@@ -115,8 +108,6 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
         }
     }
 
-
-
     if (!isOpen) return null;
 
     return (
@@ -124,6 +115,7 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ isOpen, onClose }) => {
             {renderForm()}
         </div>
     );
+
 };
 
 export default SignUpModal;

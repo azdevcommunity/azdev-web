@@ -1,0 +1,20 @@
+.monthSelectBox {
+    color: #71767B;
+    transform: translateY(-10%);
+    font-size: small;
+    
+}
+
+@media screen and (max-width: 768px) {
+    .monthButton {
+        width:100%;
+    }
+    .monthText{
+        font-size: 0.9rem;
+        width: 8vh !important;
+    }
+
+    .monthList {
+        width: 90px;
+    }
+}

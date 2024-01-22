@@ -1,4 +1,4 @@
-import {BellIcon, HomeIcon, InboxIcon, TrashIcon} from "@heroicons/react/24/outline";
+import {BellIcon, HomeIcon, InboxIcon, TrashIcon} from "@heroicons/react/outline";
 import SideBarLink from "./component/SideBarLink.tsx";
 import style from './sidebar.module.css'
 const Sidebar = () => {
