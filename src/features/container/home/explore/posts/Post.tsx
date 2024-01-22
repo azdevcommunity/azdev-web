@@ -1,26 +1,24 @@
-
-import {Avatar, Button, Image} from "@nextui-org/react";
+import {Button, Image} from "@nextui-org/react";
 import style from './post.module.css'
 import PostMore from "./PostMore.tsx";
 import {ArrowPathIcon, ChatBubbleOvalLeftEllipsisIcon, HeartIcon, ShareIcon} from "@heroicons/react/24/outline";
+import {useNavigate} from "react-router-dom";
+import routing from "../../../../utils/routing.ts";
+import PostUserDetail from "../../../../components/post/PostUserDetail.tsx";
+import PostAvatar from "../../../../components/post/PostAvatar.tsx";
 
 const Post = ({isImage}: any) => {
+    const navigate = useNavigate();
     return (
-        <div className={`${style.post} w-full flex mb-4 border-b-1 text-white p-4 `}>
-            <div className={"pl-2 pr-4"}>
-                <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026024d"/>
-            </div>
+        <div onClick={() => routing.routeTo(navigate, "/post")}
+             className={`${style.post} postBorder w-full cursor-pointer flex mb-4 border-b-1 text-white p-4 `}>
+            <PostAvatar/>
             <div className={"relative w-full"}>
-                <div className="flex items-center space-x-2">
-                    <div>
-                        <span className="font-bold">DogeDesigner</span>
-                        <span className="text-gray-400">@cb_doge · 14h</span>
-                    </div>
-                </div>
+                <PostUserDetail onClick={() => routing.routeTo(navigate, "/post")}/>
                 <p className="mt-2">Comedy is legal on this platform!</p>
                 {
                     isImage === 1 &&
-                    <div className={"py-2"}>
+                    <div  className={"py-2"}>
                         <Image
                             width={"full"}
                             alt="NextUI hero Image"
@@ -50,7 +48,6 @@ const Post = ({isImage}: any) => {
                             <ArrowPathIcon className="w-5 h-5"/>
                         </Button>
                         <span>1.1K</span>
-
                     </div>
                     <div className={"flex justify-center items-center"}>
                         <Button size={"sm"} color={"danger"} variant="light" className={"rounded-full"} isIconOnly>

@@ -9,7 +9,10 @@ interface Props{
 const MoreButton:FC<Props> = ({className}) => {
     return (
         <div
-            className={`${className} cursor-pointer rounded-full hover:text-indigo-400 hover:bg-blue-800 hover:bg-opacity-20 right-1`}>
+            style={{
+                width:"max-content"
+            }}
+            className={`${className}  cursor-pointer rounded-full hover:text-indigo-400 hover:bg-blue-800 hover:bg-opacity-20 right-1`}>
             <MoreIcon/>
         </div>
     );

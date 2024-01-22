@@ -26,7 +26,7 @@ export default Sidebar;
 const sidebarData = [
     {
         icon: <HomeIcon className="w-7 h-7"/>,
-        path: '#',
+        path: '/home',
         text: 'Home',
         id: "home"
     },
