@@ -1,9 +1,14 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
 import style from './SelectBoxYear.module.css';
 
-const Dropdown: React.FC = () => {
+interface DropdownProps {
+  onChange?: (value: string) => void;
+  selectedYearName?: string;
+}
+
+const Dropdown: React.FC<DropdownProps> = ({ onChange, selectedYearName}) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState('');
+  const [selected, setSelected] = useState(selectedYearName);
   const [buttonWidth, setButtonWidth] = useState(0); // New state for button width
   const buttonRef = useRef(null); // Ref for the yearButton
   const dropdownRef = useRef(null); // Ref for the dropdown
@@ -13,6 +18,7 @@ const Dropdown: React.FC = () => {
   const handleSelect = (year: string) => {
     setSelected(year);
     setIsOpen(false);
+    if (onChange) onChange(year);
   };
 
   useLayoutEffect(() => {
