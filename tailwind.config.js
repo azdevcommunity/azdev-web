@@ -30,7 +30,7 @@ export default {
             'milk-white': '#E7E9EA',
             'custom-color': {
               100: '#242D34',
-              200: '#a5f3fc',
+              200: '#71767B',
               300: '#67e8f9',
               400: '#22d3ee',
               500: '#06b6d4',
