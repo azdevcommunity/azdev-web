@@ -1,18 +1,24 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
 import style from './SelectBoxDay.module.css';
 
-const Dropdown: React.FC = () => {
+
+interface DropdownProps {
+  onChange?: (value: string) => void;
+  selectedDayName?: string;
+}
+const Dropdown: React.FC<DropdownProps> = ({ onChange, selectedDayName }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState('');
-  const [buttonWidth, setButtonWidth] = useState(0); // New state for button width
-  const buttonRef = useRef(null); // Ref for the yearButton
-  const dropdownRef = useRef(null); // Ref for the dropdown
+  const [selected, setSelected] = useState(selectedDayName);
+  const [buttonWidth, setButtonWidth] = useState(0);
+  const buttonRef = useRef(null);
+  const dropdownRef = useRef(null);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   const handleSelect = (day: string) => {
     setSelected(day);
     setIsOpen(false);
+    if (onChange) onChange(day);
   };
 
   useLayoutEffect(() => {
@@ -53,7 +59,7 @@ const Dropdown: React.FC = () => {
         <span className={style.daySelectBox}>Gün</span>
         <div className="flex items-start justify-between flex-row">
           {selectedDay()}
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className={`w-5 h-5 ${isOpen && 'transform rotate-180'} transition-transform`}> 
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className={`w-5 h-5 ${isOpen && 'transform rotate-180'} transition-transform`}>
             <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
           </svg>
         </div>
